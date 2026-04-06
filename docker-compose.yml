@@ -1,0 +1,62 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq-dev
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_port_connectivity"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  orderapi:
+    build:
+      context: .
+      dockerfile: OrderApi/Dockerfile
+    container_name: orderapi
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    restart: on-failure
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+    ports:
+      - "5258:8080"
+
+  inventoryservice:
+    build:
+      context: .
+      dockerfile: InventoryService/Dockerfile
+    container_name: inventoryservice
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    restart: on-failure
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+
+  paymentservice:
+    build:
+      context: .
+      dockerfile: PaymentService/Dockerfile
+    container_name: paymentservice
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    restart: on-failure
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+
+  shippingservice:
+    build:
+      context: .
+      dockerfile: ShippingService/Dockerfile
+    container_name: shippingservice
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    restart: on-failure
+    environment:
+      - RABBITMQ_HOST=rabbitmq

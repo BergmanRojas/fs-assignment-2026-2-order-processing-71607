@@ -17,9 +17,11 @@ public class RabbitMqPublisher
 
     public async Task PublishPaymentApproved(PaymentApproved paymentApproved)
     {
+        var rabbitMqHost = Environment.GetEnvironmentVariable("RABBITMQ_HOST") ?? "localhost";
+
         var factory = new ConnectionFactory
         {
-            HostName = "localhost"
+            HostName = rabbitMqHost
         };
 
         await using var connection = await factory.CreateConnectionAsync();

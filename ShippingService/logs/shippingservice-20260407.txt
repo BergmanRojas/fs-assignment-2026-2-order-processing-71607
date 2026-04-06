@@ -1,0 +1,55 @@
+2026-04-07 00:09:47.725 +01:00 [INF] Application is shutting down...
+2026-04-07 00:21:30.194 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 00:21:30.209 +01:00 [ERR] BackgroundService failed
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (nodename nor servname provided, or not known)
+ ---> System.Net.Sockets.SocketException (00000005, 0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.<>c.<GetHostEntryOrAddressesCoreAsync>b__33_0(Object s, NameResolutionActivity activity)
+   at System.Net.Dns.<>c__DisplayClass39_0`1.<RunAsync>b__0(Task <p0>, Object <p1>)
+   at System.Threading.Tasks.ContinuationResultTaskFromTask`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.Impl.SocketFactory.OpenAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.CreateAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandlerAsync(AmqpTcpEndpoint endpoint, CancellationToken cancellationToken)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Framing.AutorecoveringConnection.CreateAsync(ConnectionConfig config, IEndpointResolver endpoints, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   at ShippingService.Consumers.PaymentApprovedConsumer.ExecuteAsync(CancellationToken stoppingToken) in /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/ShippingService/Consumers/PaymentApprovedConsumer.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-04-07 00:21:30.217 +01:00 [FTL] The HostOptions.BackgroundServiceExceptionBehavior is configured to StopHost. A BackgroundService has thrown an unhandled exception, and the IHost instance is stopping. To avoid this behavior, configure this to Ignore; however the BackgroundService will not be restarted.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (nodename nor servname provided, or not known)
+ ---> System.Net.Sockets.SocketException (00000005, 0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 activityOrDefault)
+   at System.Net.Dns.<>c.<GetHostEntryOrAddressesCoreAsync>b__33_0(Object s, NameResolutionActivity activity)
+   at System.Net.Dns.<>c__DisplayClass39_0`1.<RunAsync>b__0(Task <p0>, Object <p1>)
+   at System.Threading.Tasks.ContinuationResultTaskFromTask`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.Impl.SocketFactory.OpenAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.CreateAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandlerAsync(AmqpTcpEndpoint endpoint, CancellationToken cancellationToken)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Framing.AutorecoveringConnection.CreateAsync(ConnectionConfig config, IEndpointResolver endpoints, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   at ShippingService.Consumers.PaymentApprovedConsumer.ExecuteAsync(CancellationToken stoppingToken) in /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/ShippingService/Consumers/PaymentApprovedConsumer.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-04-07 00:21:30.218 +01:00 [INF] Hosting environment: Development
+2026-04-07 00:21:30.222 +01:00 [INF] Application is shutting down...
+2026-04-07 00:21:30.222 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/ShippingService

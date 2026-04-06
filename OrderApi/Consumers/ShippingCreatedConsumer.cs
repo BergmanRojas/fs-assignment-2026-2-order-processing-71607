@@ -21,9 +21,11 @@ public class ShippingCreatedConsumer : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
+        var rabbitMqHost = Environment.GetEnvironmentVariable("RABBITMQ_HOST") ?? "localhost";
+
         var factory = new ConnectionFactory
         {
-            HostName = "localhost"
+            HostName = rabbitMqHost
         };
 
         var connection = await factory.CreateConnectionAsync(stoppingToken);
