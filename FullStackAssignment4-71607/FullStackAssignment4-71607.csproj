@@ -7,4 +7,8 @@
         <RootNamespace>FullStackAssignment4_71607</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Content Include=".github\workflows\dotnet.yml" />
+    </ItemGroup>
+
 </Project>
