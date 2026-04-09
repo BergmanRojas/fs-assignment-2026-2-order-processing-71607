@@ -1182,3 +1182,1063 @@ FROM "Orders" AS "o"
 2026-04-09 03:13:41.455 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
 2026-04-09 03:13:41.457 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 76.3242ms
 2026-04-09 03:13:41.457 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 76.342ms
+2026-04-09 03:26:29.237 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:26:29.240 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:26:29.241 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:26:29.275 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:26:29.275 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:26:29.276 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:26:29.276 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:26:29.277 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 39.2713ms
+2026-04-09 03:30:34.868 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:30:34.868 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:30:34.869 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:30:34.870 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:30:34.871 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:30:34.871 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:30:34.871 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:30:34.871 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.7783ms
+2026-04-09 03:35:05.409 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:35:05.409 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:35:05.409 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:35:05.410 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:35:05.411 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:35:05.411 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:35:05.411 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:35:05.411 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.4111ms
+2026-04-09 03:36:58.249 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:36:58.249 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:36:58.249 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:36:58.249 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:36:58.250 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:36:58.250 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:36:58.250 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:36:58.250 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.1641ms
+2026-04-09 03:36:58.383 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:36:58.383 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:36:58.383 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:36:58.384 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:36:58.385 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:36:58.385 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:36:58.385 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:36:58.385 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.1662ms
+2026-04-09 03:42:43.755 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:42:43.755 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:42:43.755 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:42:43.757 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:42:43.758 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:42:43.758 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:42:43.758 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:42:43.759 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.995ms
+2026-04-09 03:42:53.756 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:42:53.757 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:42:53.757 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:42:53.758 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:42:53.758 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:42:53.758 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:42:53.759 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:42:53.761 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 5.1136ms
+2026-04-09 03:43:03.759 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:43:03.759 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:43:03.759 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:03.762 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:43:03.763 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:43:03.764 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:43:03.764 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:03.764 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 5.6806ms
+2026-04-09 03:43:13.760 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:43:13.761 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:43:13.761 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:13.764 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:43:13.766 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:43:13.766 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:43:13.767 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:13.767 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 6.8722ms
+2026-04-09 03:43:23.758 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:43:23.758 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:43:23.758 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:23.759 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:43:23.759 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:43:23.759 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:43:23.760 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:23.760 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.1701ms
+2026-04-09 03:43:33.757 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:43:33.757 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:43:33.758 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:33.758 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:43:33.759 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:43:33.759 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:43:33.760 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:33.760 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.924ms
+2026-04-09 03:43:43.760 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:43:43.760 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:43:43.760 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:43.761 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:43:43.761 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:43:43.762 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:43:43.762 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:43.762 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.083ms
+2026-04-09 03:43:53.762 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:43:53.762 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:43:53.762 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:53.767 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:43:53.767 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:43:53.767 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:43:53.767 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:43:53.768 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 6.0172ms
+2026-04-09 03:44:03.766 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:44:03.767 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:44:03.767 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:03.768 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:44:03.768 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:44:03.768 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:44:03.769 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:03.769 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.5183ms
+2026-04-09 03:44:13.772 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:44:13.773 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:44:13.774 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:13.776 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:44:13.777 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:44:13.778 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:44:13.778 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:13.778 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 6.3417ms
+2026-04-09 03:44:23.773 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:44:23.773 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:44:23.774 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:23.774 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:44:23.775 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:44:23.775 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:44:23.775 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:23.775 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.094ms
+2026-04-09 03:44:33.780 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:44:33.780 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:44:33.781 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:33.783 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:44:33.784 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:44:33.784 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:44:33.784 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:33.785 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 5.0006ms
+2026-04-09 03:44:43.784 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:44:43.784 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:44:43.785 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:43.788 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:44:43.788 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:44:43.789 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:44:43.789 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:43.789 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 5.4294ms
+2026-04-09 03:44:53.784 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:44:53.785 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:44:53.785 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:53.786 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:44:53.786 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:44:53.786 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:44:53.787 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:44:53.787 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.3887ms
+2026-04-09 03:45:03.790 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:45:03.790 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:45:03.790 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:03.791 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:45:03.791 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:45:03.792 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:45:03.792 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:03.792 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.2712ms
+2026-04-09 03:45:13.793 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:45:13.794 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:45:13.794 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:13.795 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:45:13.795 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:45:13.795 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:45:13.795 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:13.796 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.6672ms
+2026-04-09 03:45:23.799 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:45:23.799 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:45:23.799 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:23.800 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:45:23.801 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:45:23.802 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:45:23.802 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:23.802 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.4031ms
+2026-04-09 03:45:33.802 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:45:33.802 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:45:33.802 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:33.803 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:45:33.803 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:45:33.803 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:45:33.804 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:33.804 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.7902ms
+2026-04-09 03:45:43.805 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:45:43.805 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:45:43.805 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:43.808 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:45:43.808 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:45:43.808 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:45:43.809 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:43.809 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 4.0981ms
+2026-04-09 03:45:53.809 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:45:53.810 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:45:53.810 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:53.811 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:45:53.811 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:45:53.811 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:45:53.811 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:45:53.812 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.142ms
+2026-04-09 03:46:03.814 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:46:03.814 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:46:03.814 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:03.815 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:46:03.815 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:46:03.816 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:46:03.816 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:03.817 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.1927ms
+2026-04-09 03:46:13.818 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:46:13.818 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:46:13.818 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:13.821 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:46:13.821 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:46:13.821 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:46:13.821 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:13.822 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.885ms
+2026-04-09 03:46:23.821 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:46:23.821 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:46:23.822 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:23.823 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:46:23.824 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:46:23.824 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:46:23.824 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:23.824 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.342ms
+2026-04-09 03:46:33.826 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:46:33.827 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:46:33.827 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:33.828 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:46:33.828 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:46:33.828 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:46:33.828 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:33.828 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.1282ms
+2026-04-09 03:46:43.830 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:46:43.830 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:46:43.831 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:43.831 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:46:43.832 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:46:43.832 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:46:43.833 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:43.833 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.794ms
+2026-04-09 03:46:53.834 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:46:53.834 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:46:53.835 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:53.835 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:46:53.836 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:46:53.836 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:46:53.836 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:46:53.836 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.1185ms
+2026-04-09 03:47:03.837 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:47:03.838 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:47:03.838 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:03.839 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:47:03.839 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:47:03.839 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:47:03.839 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:03.839 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.8733ms
+2026-04-09 03:47:13.841 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:47:13.842 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:47:13.842 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:13.843 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:47:13.843 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:47:13.843 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:47:13.843 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:13.843 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.8797ms
+2026-04-09 03:47:23.846 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:47:23.846 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:47:23.847 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:23.847 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:47:23.850 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:47:23.850 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:47:23.851 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:23.851 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 5.3104ms
+2026-04-09 03:47:33.850 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:47:33.850 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:47:33.850 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:33.852 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:47:33.852 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:47:33.852 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:47:33.852 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:33.852 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.2413ms
+2026-04-09 03:47:43.855 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:47:43.855 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:47:43.855 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:43.857 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:47:43.858 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:47:43.858 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:47:43.858 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:43.858 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.4663ms
+2026-04-09 03:47:53.858 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:47:53.858 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:47:53.858 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:53.859 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:47:53.859 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:47:53.859 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:47:53.859 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:47:53.862 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.8003ms
+2026-04-09 03:48:03.861 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:48:03.861 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:48:03.861 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:03.861 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:48:03.862 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:48:03.862 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:48:03.862 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:03.862 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.0314ms
+2026-04-09 03:48:13.864 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:48:13.864 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:48:13.865 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:13.866 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:48:13.866 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:48:13.866 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:48:13.866 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:13.866 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.3817ms
+2026-04-09 03:48:23.869 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:48:23.870 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:48:23.870 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:23.871 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:48:23.871 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:48:23.871 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:48:23.871 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:23.871 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.8472ms
+2026-04-09 03:48:33.873 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:48:33.873 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:48:33.873 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:33.874 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:48:33.874 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:48:33.874 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:48:33.874 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:33.874 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.8682ms
+2026-04-09 03:48:43.876 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:48:43.877 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:48:43.877 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:43.878 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:48:43.878 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:48:43.878 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:48:43.879 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:43.879 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.8221ms
+2026-04-09 03:48:53.882 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:48:53.883 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:48:53.883 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:53.885 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:48:53.886 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:48:53.886 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:48:53.886 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:48:53.886 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.6663ms
+2026-04-09 03:49:03.888 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:49:03.888 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:49:03.889 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:03.890 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:49:03.891 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:49:03.891 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:49:03.892 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:03.892 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.837ms
+2026-04-09 03:49:13.891 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:49:13.892 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:49:13.892 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:13.894 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:49:13.895 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:49:13.896 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:49:13.896 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:13.896 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 4.6463ms
+2026-04-09 03:49:23.894 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:49:23.895 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:49:23.895 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:23.896 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:49:23.896 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:49:23.897 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:49:23.897 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:23.897 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.475ms
+2026-04-09 03:49:33.899 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:49:33.900 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:49:33.900 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:33.903 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:49:33.903 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:49:33.903 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:49:33.904 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:33.904 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 4.7733ms
+2026-04-09 03:49:43.901 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:49:43.901 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:49:43.901 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:43.902 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:49:43.903 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:49:43.903 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:49:43.903 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:43.903 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.7291ms
+2026-04-09 03:49:53.905 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:49:53.905 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:49:53.905 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:53.906 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:49:53.906 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:49:53.906 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:49:53.907 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:49:53.907 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.4656ms
+2026-04-09 03:50:03.910 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:50:03.911 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:50:03.911 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:03.912 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:50:03.912 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:50:03.912 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:50:03.913 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:03.913 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.134ms
+2026-04-09 03:50:13.914 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:50:13.915 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:50:13.915 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:13.917 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:50:13.918 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:50:13.918 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:50:13.918 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:13.918 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 4.0914ms
+2026-04-09 03:50:23.919 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:50:23.919 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:50:23.919 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:23.920 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:50:23.920 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:50:23.920 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:50:23.921 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:23.921 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.7087ms
+2026-04-09 03:50:33.921 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:50:33.921 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:50:33.921 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:33.922 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:50:33.922 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:50:33.922 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:50:33.922 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:33.922 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.4454ms
+2026-04-09 03:50:43.924 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:50:43.924 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:50:43.924 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:43.925 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:50:43.926 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:50:43.926 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:50:43.926 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:43.926 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.5626ms
+2026-04-09 03:50:53.931 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:50:53.932 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:50:53.932 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:53.933 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:50:53.934 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:50:53.935 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:50:53.935 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:50:53.935 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.925ms
+2026-04-09 03:51:03.936 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:51:03.936 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:51:03.936 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:03.938 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:51:03.938 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:51:03.938 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:51:03.939 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:03.939 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.4326ms
+2026-04-09 03:51:13.939 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:51:13.940 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:51:13.940 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:13.942 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:51:13.943 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:51:13.943 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:51:13.944 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:13.944 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 4.4149ms
+2026-04-09 03:51:23.943 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:51:23.944 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:51:23.944 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:23.946 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:51:23.946 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:51:23.946 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:51:23.947 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:23.947 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.4673ms
+2026-04-09 03:51:33.944 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:51:33.945 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:51:33.945 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:33.945 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:51:33.945 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:51:33.946 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:51:33.946 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:33.946 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.7907ms
+2026-04-09 03:51:43.950 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:51:43.951 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:51:43.951 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:43.952 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:51:43.952 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:51:43.953 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:51:43.953 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:43.953 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.8905ms
+2026-04-09 03:51:53.954 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:51:53.954 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:51:53.954 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:53.955 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:51:53.955 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:51:53.955 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:51:53.956 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:51:53.956 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.0567ms
+2026-04-09 03:52:03.957 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:52:03.958 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:52:03.958 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:03.959 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:52:03.959 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:52:03.959 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:52:03.959 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:03.959 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.0672ms
+2026-04-09 03:52:13.962 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:52:13.962 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:52:13.962 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:13.963 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:52:13.963 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:52:13.963 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:52:13.964 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:13.964 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.7966ms
+2026-04-09 03:52:23.966 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:52:23.967 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:52:23.967 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:23.968 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:52:23.969 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:52:23.969 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:52:23.969 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:23.969 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.8753ms
+2026-04-09 03:52:33.970 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:52:33.970 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:52:33.970 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:33.971 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:52:33.971 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:52:33.971 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:52:33.971 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:33.972 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.3967ms
+2026-04-09 03:52:43.974 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:52:43.974 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:52:43.974 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:43.975 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:52:43.990 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:52:43.990 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:52:43.990 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:43.990 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 15.856ms
+2026-04-09 03:52:53.977 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:52:53.977 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:52:53.977 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:53.978 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:52:53.978 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:52:53.978 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:52:53.978 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:52:53.979 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.4562ms
+2026-04-09 03:53:03.982 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:53:03.982 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:53:03.982 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:03.983 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:53:03.983 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:53:03.983 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:53:03.983 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:03.983 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.7274ms
+2026-04-09 03:53:13.986 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:53:13.987 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:53:13.987 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:13.987 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:53:13.987 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:53:13.987 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:53:13.987 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:13.988 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.2131ms
+2026-04-09 03:53:23.988 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:53:23.988 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:53:23.988 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:23.989 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:53:23.989 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:53:23.990 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:53:23.990 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:23.990 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.943ms
+2026-04-09 03:53:33.994 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:53:33.994 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:53:33.994 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:33.995 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:53:33.995 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:53:33.995 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:53:33.995 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:33.995 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.5002ms
+2026-04-09 03:53:43.998 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:53:43.998 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:53:43.998 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:43.999 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:53:43.999 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:53:43.999 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:53:44.000 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:44.000 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.5926ms
+2026-04-09 03:53:54.001 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:53:54.002 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:53:54.002 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:54.004 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:53:54.005 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:53:54.005 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:53:54.005 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:53:54.006 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 4.131ms
+2026-04-09 03:54:04.006 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:54:04.006 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:54:04.006 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:04.007 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:54:04.007 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:54:04.007 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:54:04.007 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:04.007 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.6652ms
+2026-04-09 03:54:14.010 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:54:14.011 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:54:14.011 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:14.011 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:54:14.011 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:54:14.012 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:54:14.012 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:14.012 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.5279ms
+2026-04-09 03:54:24.015 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:54:24.015 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:54:24.015 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:24.016 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:54:24.016 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:54:24.016 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:54:24.016 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:24.016 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.584ms
+2026-04-09 03:54:34.018 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:54:34.019 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:54:34.019 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:34.020 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:54:34.020 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:54:34.020 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:54:34.020 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:34.020 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.0467ms
+2026-04-09 03:54:44.022 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:54:44.022 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:54:44.022 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:44.023 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:54:44.023 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:54:44.023 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:54:44.023 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:44.023 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.4536ms
+2026-04-09 03:54:54.025 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:54:54.025 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:54:54.026 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:54.026 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:54:54.026 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:54:54.026 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:54:54.027 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:54:54.027 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.568ms
+2026-04-09 03:55:04.030 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:55:04.030 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:55:04.030 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:04.031 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:55:04.031 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:55:04.031 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:55:04.032 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:04.032 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.5431ms
+2026-04-09 03:55:14.032 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:55:14.033 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:55:14.033 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:14.033 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:55:14.033 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:55:14.033 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:55:14.033 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:14.033 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 0.7469ms
+2026-04-09 03:55:24.037 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:55:24.037 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:55:24.037 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:24.038 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:55:24.038 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:55:24.038 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:55:24.038 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:24.038 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 0.6986ms
+2026-04-09 03:55:34.041 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:55:34.041 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:55:34.041 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:34.042 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:55:34.042 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:55:34.042 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:55:34.042 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:34.042 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 0.9439ms
+2026-04-09 03:55:44.046 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:55:44.046 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:55:44.047 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:44.047 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:55:44.047 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:55:44.048 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:55:44.048 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:44.048 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.6254ms
+2026-04-09 03:55:54.051 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:55:54.051 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:55:54.051 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:54.052 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:55:54.053 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:55:54.053 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:55:54.053 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:55:54.053 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.8612ms
+2026-04-09 03:56:04.048 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:56:04.049 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:56:04.049 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:04.050 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:56:04.050 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:56:04.050 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:56:04.050 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:04.050 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.307ms
+2026-04-09 03:56:14.041 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:56:14.042 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:56:14.042 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:14.043 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:56:14.043 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:56:14.043 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:56:14.043 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:14.043 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.8232ms
+2026-04-09 03:56:24.038 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:56:24.038 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:56:24.039 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:24.039 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:56:24.039 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:56:24.040 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:56:24.040 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:24.040 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.8409ms
+2026-04-09 03:56:34.041 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:56:34.041 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:56:34.041 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:34.043 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:56:34.044 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:56:34.044 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:56:34.044 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:34.044 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.9527ms
+2026-04-09 03:56:44.043 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:56:44.044 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:56:44.044 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:44.044 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:56:44.045 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:56:44.045 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:56:44.045 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:44.045 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.6551ms
+2026-04-09 03:56:54.048 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:56:54.049 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:56:54.049 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:54.050 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:56:54.051 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:56:54.051 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:56:54.051 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:56:54.051 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.7421ms
+2026-04-09 03:57:04.049 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:57:04.049 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:57:04.050 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:04.050 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:57:04.050 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:57:04.051 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:57:04.051 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:04.051 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.647ms
+2026-04-09 03:57:09.539 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:57:09.539 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:57:09.540 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:09.540 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:57:09.540 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:57:09.540 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:57:09.540 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:09.540 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 0.7827ms
+2026-04-09 03:57:19.541 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:57:19.542 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:57:19.542 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:19.543 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:57:19.543 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:57:19.543 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:57:19.544 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:19.544 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.2245ms
+2026-04-09 03:57:29.541 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:57:29.541 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:57:29.541 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:29.541 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:57:29.541 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:57:29.541 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:57:29.542 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:29.542 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 0.7278ms
+2026-04-09 03:57:39.544 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:57:39.544 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:57:39.544 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:39.545 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:57:39.546 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:57:39.546 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:57:39.546 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:39.546 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.7667ms
+2026-04-09 03:57:49.545 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:57:49.546 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:57:49.546 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:49.548 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:57:49.548 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:57:49.548 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:57:49.548 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:49.549 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.3237ms
+2026-04-09 03:57:59.546 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:57:59.547 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:57:59.547 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:59.548 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:57:59.549 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:57:59.549 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:57:59.549 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:57:59.549 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.5742ms
+2026-04-09 03:58:09.545 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:58:09.545 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:58:09.545 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:09.545 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:58:09.546 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:58:09.546 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:58:09.546 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:09.547 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.1318ms
+2026-04-09 03:58:19.549 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:58:19.549 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:58:19.549 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:19.550 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:58:19.550 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:58:19.550 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:58:19.551 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:19.551 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.7383ms
+2026-04-09 03:58:29.552 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:58:29.552 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:58:29.553 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:29.555 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:58:29.555 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:58:29.555 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:58:29.555 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:29.555 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 3.3657ms
+2026-04-09 03:58:39.557 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:58:39.557 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:58:39.558 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:39.558 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:58:39.558 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:58:39.559 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:58:39.559 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:39.559 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.528ms
+2026-04-09 03:58:49.561 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:58:49.561 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:58:49.561 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:49.562 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:58:49.563 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:58:49.563 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:58:49.563 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:49.564 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.9747ms
+2026-04-09 03:58:59.567 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:58:59.567 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:58:59.568 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:59.569 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:58:59.569 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:58:59.569 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:58:59.569 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:58:59.569 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 2.5617ms
+2026-04-09 03:59:09.568 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:59:09.568 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:59:09.568 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:59:09.569 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:59:09.569 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:59:09.569 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:59:09.569 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:59:09.570 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.6102ms
+2026-04-09 03:59:19.571 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-09 03:59:19.571 +01:00 [INF] CORS policy execution successful.
+2026-04-09 03:59:19.571 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:59:19.572 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-09 03:59:19.572 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 03:59:19.572 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 03:59:19.572 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-09 03:59:19.573 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.4703ms
