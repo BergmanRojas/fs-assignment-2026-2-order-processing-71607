@@ -14,7 +14,7 @@ services:
   orderapi:
     build:
       context: .
-      dockerfile: OrderApi/Dockerfile
+      dockerfile: Backend/OrderApi/Dockerfile
     container_name: orderapi
     depends_on:
       rabbitmq:
@@ -28,7 +28,7 @@ services:
   inventoryservice:
     build:
       context: .
-      dockerfile: InventoryService/Dockerfile
+      dockerfile: Backend/InventoryService/Dockerfile
     container_name: inventoryservice
     depends_on:
       rabbitmq:
@@ -40,7 +40,7 @@ services:
   paymentservice:
     build:
       context: .
-      dockerfile: PaymentService/Dockerfile
+      dockerfile: Backend/PaymentService/Dockerfile
     container_name: paymentservice
     depends_on:
       rabbitmq:
@@ -52,7 +52,7 @@ services:
   shippingservice:
     build:
       context: .
-      dockerfile: ShippingService/Dockerfile
+      dockerfile: Backend/ShippingService/Dockerfile
     container_name: shippingservice
     depends_on:
       rabbitmq:
