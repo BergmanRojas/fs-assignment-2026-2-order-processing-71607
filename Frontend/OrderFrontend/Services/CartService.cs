@@ -26,7 +26,7 @@ public class CartService
                 Name = product.Name,
                 Price = product.Price,
                 Quantity = 1,
-                ImageUrl = product.ImageUrl
+                ImageUrl = product.ImageUrl ?? string.Empty
             });
         }
         else

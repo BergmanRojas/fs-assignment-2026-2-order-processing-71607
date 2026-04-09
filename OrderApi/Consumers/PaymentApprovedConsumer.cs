@@ -75,9 +75,15 @@ public class PaymentApprovedConsumer : BackgroundService
                     if (order is not null)
                     {
                         order.PaymentApprovedAt = paymentApproved.ApprovedAt;
-                        order.Status = paymentApproved.IsApproved
-                            ? "Payment Approved"
-                            : "Payment Failed";
+
+                        if (!paymentApproved.IsApproved)
+                        {
+                            order.Status = "Failed";
+                        }
+                        else if (!IsFinalStatus(order.Status))
+                        {
+                            order.Status = "Payment Approved";
+                        }
 
                         await db.SaveChangesAsync(stoppingToken);
 
@@ -120,5 +126,10 @@ public class PaymentApprovedConsumer : BackgroundService
         _logger.LogInformation("OrderApi is waiting for payment-approved messages...");
 
         await Task.Delay(Timeout.Infinite, stoppingToken);
+    }
+
+    private static bool IsFinalStatus(string? status)
+    {
+        return status is "Shipping Created" or "Completed" or "Failed";
     }
 }

@@ -13,7 +13,9 @@
 
             <div class="topbar-right">
                 <button class="topbar-link" @onclick="GoHome">Home</button>
+                <button class="topbar-link" @onclick="GoCart">Cart</button>
                 <button class="topbar-link" @onclick="GoOrders">Orders</button>
+                <button class="topbar-link" @onclick="GoTracking">Tracking</button>
                 <button class="topbar-button logout" @onclick="Logout">Logout</button>
             </div>
         </header>
@@ -41,7 +43,7 @@
     private bool IsLoginPage()
     {
         var relativePath = Nav.ToBaseRelativePath(Nav.Uri);
-        return string.IsNullOrWhiteSpace(relativePath);
+        return string.IsNullOrWhiteSpace(relativePath) || relativePath.Equals("login", StringComparison.OrdinalIgnoreCase);
     }
 
     private void GoHome()
@@ -49,9 +51,19 @@
         Nav.NavigateTo("/home");
     }
 
+    private void GoCart()
+    {
+        Nav.NavigateTo("/cart");
+    }
+
     private void GoOrders()
     {
         Nav.NavigateTo("/orders");
+    }
+
+    private void GoTracking()
+    {
+        Nav.NavigateTo("/tracking");
     }
 
     private async Task Logout()

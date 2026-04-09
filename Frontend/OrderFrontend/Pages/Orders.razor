@@ -1,10 +1,9 @@
 @page "/orders"
 @using System.Net.Http.Json
-@using OrderFrontend.Models
 @inject HttpClient Http
 @inject NavigationManager Nav
 @inject OrderFrontend.Services.AuthService Auth
-@inject OrderFrontend.Services.CartService Cart
+@inject OrderFrontend.Services.CartService CartService
 
 <PageTitle>Orders</PageTitle>
 
@@ -14,17 +13,29 @@
 }
 else
 {
-    <div class="home-page">
-        <section class="home-hero">
+    <div class="orders-page">
+        <section class="orders-hero">
             <div>
-                <h1>Orders</h1>
-                <p>View available items and add them to your cart.</p>
+                <p class="eyebrow">Deals Store</p>
+                <h1>My Orders</h1>
+                <p>Review your previous orders and track their current status.</p>
             </div>
 
-            <div class="cart-summary">
-                <span>Cart Items</span>
-                <strong>@Cart.TotalItems</strong>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span>Orders</span>
+                    <strong>@orders.Count</strong>
+                </div>
+                <div class="hero-stat">
+                    <span>Cart Items</span>
+                    <strong>@CartService.TotalItems</strong>
+                </div>
             </div>
+        </section>
+
+        <section class="quick-links">
+            <button class="secondary-btn" @onclick="GoHome">Back to Home</button>
+            <button class="secondary-btn" @onclick="RefreshOrders">Refresh Orders</button>
         </section>
 
         @if (!string.IsNullOrWhiteSpace(feedback))
@@ -35,43 +46,76 @@ else
         @if (isLoading)
         {
             <section class="state-card">
-                <p>Loading products...</p>
+                <p>Loading orders...</p>
             </section>
         }
         else if (!string.IsNullOrWhiteSpace(errorMessage))
         {
             <section class="state-card">
                 <p>@errorMessage</p>
-                <button class="secondary-btn" @onclick="LoadProducts">Retry</button>
+                <button class="secondary-btn" @onclick="RefreshOrders">Retry</button>
             </section>
         }
-        else if (products.Count == 0)
+        else if (orders.Count == 0)
         {
             <section class="state-card">
-                <p>No products available.</p>
+                <h3>No orders yet</h3>
+                <p>You have not placed any orders yet.</p>
+                <button class="secondary-btn" @onclick="GoHome">Start Shopping</button>
             </section>
         }
         else
         {
-            <section class="products-grid">
-                @foreach (var product in products)
+            <section class="orders-grid">
+                @foreach (var order in orders.OrderByDescending(x => x.CreatedAt))
                 {
-                    <article class="product-card">
-                        <img src="@product.ImageUrl" alt="@product.Name" class="product-image" />
-
-                        <div class="product-body">
-                            <h3>@product.Name</h3>
-                            <p class="product-description">@product.Description</p>
-
-                            <div class="product-meta">
-                                <span class="product-price">€@product.Price.ToString("0.00")</span>
-                                <span class="product-stock">Stock: @product.StockQuantity</span>
+                    <article class="order-card">
+                        <div class="order-card-top">
+                            <div>
+                                <p class="order-label">Order ID</p>
+                                <h3>@order.OrderId</h3>
                             </div>
 
-                            <button class="primary-btn"
-                                    @onclick="() => AddToCart(product)"
-                                    disabled="@(product.StockQuantity <= 0)">
-                                @(product.StockQuantity <= 0 ? "Out of Stock" : "Add to Cart")
+                            <span class="status-badge @GetStatusClass(order.Status)">
+                                @order.Status
+                            </span>
+                        </div>
+
+                        <div class="order-details">
+                            <div class="detail-item">
+                                <span>Customer ID</span>
+                                <strong>@order.CustomerId</strong>
+                            </div>
+
+                            <div class="detail-item">
+                                <span>Created</span>
+                                <strong>@order.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</strong>
+                            </div>
+
+                            <div class="detail-item">
+                                <span>Inventory</span>
+                                <strong>@FormatDate(order.InventoryConfirmedAt)</strong>
+                            </div>
+
+                            <div class="detail-item">
+                                <span>Payment</span>
+                                <strong>@FormatDate(order.PaymentApprovedAt)</strong>
+                            </div>
+
+                            <div class="detail-item">
+                                <span>Shipping</span>
+                                <strong>@FormatDate(order.ShippingCreatedAt)</strong>
+                            </div>
+
+                            <div class="detail-item full-width">
+                                <span>Shipment Reference</span>
+                                <strong>@(string.IsNullOrWhiteSpace(order.ShipmentReference) ? "-" : order.ShipmentReference)</strong>
+                            </div>
+                        </div>
+
+                        <div class="order-actions">
+                            <button class="primary-btn" @onclick="() => GoTracking(order.OrderId)">
+                                Track Order
                             </button>
                         </div>
                     </article>
@@ -82,7 +126,7 @@ else
 }
 
 @code {
-    private List<Product> products = new();
+    private List<OrderDto> orders = new();
     private bool isLoading = true;
     private string? errorMessage;
     private string? feedback;
@@ -95,10 +139,15 @@ else
             return;
         }
 
-        await LoadProducts();
+        await LoadOrders();
     }
 
-    private async Task LoadProducts()
+    private async Task RefreshOrders()
+    {
+        await LoadOrders();
+    }
+
+    private async Task LoadOrders()
     {
         isLoading = true;
         errorMessage = null;
@@ -106,12 +155,12 @@ else
 
         try
         {
-            var result = await Http.GetFromJsonAsync<List<Product>>("http://localhost:5258/api/products");
-            products = result ?? new List<Product>();
+            var result = await Http.GetFromJsonAsync<List<OrderDto>>("http://localhost:5258/api/orders");
+            orders = result ?? new List<OrderDto>();
         }
         catch (Exception ex)
         {
-            errorMessage = $"Error loading products: {ex.Message}";
+            errorMessage = $"Error loading orders: {ex.Message}";
         }
         finally
         {
@@ -119,9 +168,47 @@ else
         }
     }
 
-    private void AddToCart(Product product)
+    private void GoHome()
     {
-        Cart.AddToCart(product);
-        feedback = $"{product.Name} added to cart.";
+        Nav.NavigateTo("/home");
+    }
+
+    private void GoTracking(string orderId)
+    {
+        Nav.NavigateTo($"/tracking?orderId={orderId}");
+    }
+
+    private static string FormatDate(DateTime? value)
+    {
+        return value.HasValue
+            ? value.Value.ToLocalTime().ToString("dd/MM/yyyy HH:mm")
+            : "-";
+    }
+
+    private static string GetStatusClass(string status)
+    {
+        return status.ToLowerInvariant() switch
+        {
+            "submitted" => "submitted",
+            "inventory confirmed" => "inventory",
+            "payment approved" => "payment",
+            "shipping created" => "shipping",
+            "completed" => "completed",
+            "failed" => "failed",
+            _ => "default"
+        };
+    }
+
+    private sealed class OrderDto
+    {
+        public string Id { get; set; } = string.Empty;
+        public string OrderId { get; set; } = string.Empty;
+        public string CustomerId { get; set; } = string.Empty;
+        public string Status { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; }
+        public DateTime? InventoryConfirmedAt { get; set; }
+        public DateTime? PaymentApprovedAt { get; set; }
+        public DateTime? ShippingCreatedAt { get; set; }
+        public string? ShipmentReference { get; set; }
     }
 }

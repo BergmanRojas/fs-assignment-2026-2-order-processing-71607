@@ -75,9 +75,15 @@ public class InventoryConfirmedConsumer : BackgroundService
                     if (order is not null)
                     {
                         order.InventoryConfirmedAt = inventoryConfirmed.ConfirmedAt;
-                        order.Status = inventoryConfirmed.IsInStock
-                            ? "Inventory Confirmed"
-                            : "Out of Stock";
+
+                        if (!inventoryConfirmed.IsInStock)
+                        {
+                            order.Status = "Failed";
+                        }
+                        else if (!IsFinalOrAdvancedStatus(order.Status))
+                        {
+                            order.Status = "Inventory Confirmed";
+                        }
 
                         await db.SaveChangesAsync(stoppingToken);
 
@@ -120,5 +126,10 @@ public class InventoryConfirmedConsumer : BackgroundService
         _logger.LogInformation("OrderApi is waiting for inventory-confirmed messages...");
 
         await Task.Delay(Timeout.Infinite, stoppingToken);
+    }
+
+    private static bool IsFinalOrAdvancedStatus(string? status)
+    {
+        return status is "Payment Approved" or "Shipping Created" or "Completed" or "Failed";
     }
 }
