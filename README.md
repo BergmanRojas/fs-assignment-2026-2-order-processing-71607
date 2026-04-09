@@ -1,5 +1,5 @@
 
-Distributed Order Processing Platform
+DISTRIBUTED ORDER PROCESSING PLATFORM
 
 This project is a distributed order processing platform built with .NET, RabbitMQ and multiple backend services.
 
