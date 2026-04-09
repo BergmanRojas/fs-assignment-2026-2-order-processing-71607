@@ -1,21 +1,21 @@
 using System.Text;
 using System.Text.Json;
-using OrderApi.Services;
+using Microsoft.EntityFrameworkCore;
+using OrderApi.Data;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using Shared.Contracts.Events;
-using Microsoft.Extensions.Logging;
 
 namespace OrderApi.Consumers;
 
 public class ShippingCreatedConsumer : BackgroundService
 {
-    private readonly OrderStore _orderStore;
+    private readonly IServiceScopeFactory _scopeFactory;
     private readonly ILogger<ShippingCreatedConsumer> _logger;
 
-    public ShippingCreatedConsumer(OrderStore orderStore, ILogger<ShippingCreatedConsumer> logger)
+    public ShippingCreatedConsumer(IServiceScopeFactory scopeFactory, ILogger<ShippingCreatedConsumer> logger)
     {
-        _orderStore = orderStore;
+        _scopeFactory = scopeFactory;
         _logger = logger;
     }
 
@@ -31,35 +31,86 @@ public class ShippingCreatedConsumer : BackgroundService
         var connection = await factory.CreateConnectionAsync(stoppingToken);
         var channel = await connection.CreateChannelAsync(cancellationToken: stoppingToken);
 
+        await channel.ExchangeDeclareAsync(
+            exchange: "shipping-created-exchange",
+            type: ExchangeType.Fanout,
+            durable: false,
+            autoDelete: false,
+            arguments: null,
+            cancellationToken: stoppingToken);
+
         await channel.QueueDeclareAsync(
-            queue: "shipping-created",
+            queue: "shipping-created-orderapi",
             durable: false,
             exclusive: false,
             autoDelete: false,
             arguments: null,
             cancellationToken: stoppingToken);
 
+        await channel.QueueBindAsync(
+            queue: "shipping-created-orderapi",
+            exchange: "shipping-created-exchange",
+            routingKey: string.Empty,
+            cancellationToken: stoppingToken);
+
         var consumer = new AsyncEventingBasicConsumer(channel);
 
         consumer.ReceivedAsync += async (_, ea) =>
         {
-            var body = ea.Body.ToArray();
-            var json = Encoding.UTF8.GetString(body);
-
-            var shippingCreated = JsonSerializer.Deserialize<ShippingCreated>(json);
-
-            if (shippingCreated is not null)
+            try
             {
-                _orderStore.UpdateStatus(shippingCreated.OrderId, "Completed");
+                var body = ea.Body.ToArray();
+                var json = Encoding.UTF8.GetString(body);
 
-                _logger.LogInformation("Order {OrderId} marked as Completed after shipping creation", shippingCreated.OrderId);
+                var shippingCreated = JsonSerializer.Deserialize<ShippingCreated>(json);
+
+                if (shippingCreated is not null)
+                {
+                    using var scope = _scopeFactory.CreateScope();
+                    var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
+
+                    var order = await db.Orders
+                        .FirstOrDefaultAsync(o => o.OrderId == shippingCreated.OrderId, stoppingToken);
+
+                    if (order is not null)
+                    {
+                        order.ShippingCreatedAt = shippingCreated.DispatchDate;
+                        order.ShipmentReference = shippingCreated.ShipmentReference;
+                        order.Status = "Completed";
+
+                        await db.SaveChangesAsync(stoppingToken);
+
+                        _logger.LogInformation(
+                            "Order {OrderId} marked as Completed after shipping creation",
+                            order.OrderId);
+                    }
+                    else
+                    {
+                        _logger.LogWarning(
+                            "Order {OrderId} not found when processing ShippingCreated",
+                            shippingCreated.OrderId);
+                    }
+                }
+
+                await channel.BasicAckAsync(
+                    ea.DeliveryTag,
+                    multiple: false,
+                    cancellationToken: stoppingToken);
             }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error processing ShippingCreated message");
 
-            await channel.BasicAckAsync(ea.DeliveryTag, multiple: false, cancellationToken: stoppingToken);
+                await channel.BasicNackAsync(
+                    ea.DeliveryTag,
+                    multiple: false,
+                    requeue: false,
+                    cancellationToken: stoppingToken);
+            }
         };
 
         await channel.BasicConsumeAsync(
-            queue: "shipping-created",
+            queue: "shipping-created-orderapi",
             autoAck: false,
             consumer: consumer,
             cancellationToken: stoppingToken);

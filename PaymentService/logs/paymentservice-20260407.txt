@@ -107,3 +107,57 @@ RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified end
 2026-04-07 00:22:18.310 +01:00 [INF] Hosting environment: Development
 2026-04-07 00:22:18.313 +01:00 [INF] Application is shutting down...
 2026-04-07 00:22:18.313 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/PaymentService
+2026-04-07 09:13:09.866 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:13:09.891 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:13:09.892 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/PaymentService
+2026-04-07 09:13:09.910 +01:00 [INF] PaymentService is waiting for messages...
+2026-04-07 09:13:09.943 +01:00 [INF] PaymentService received InventoryConfirmed message
+2026-04-07 09:13:09.943 +01:00 [INF] OrderId: "fb9ee4f1-1015-4696-8215-25b35fad4bab"
+2026-04-07 09:13:09.944 +01:00 [INF] CustomerId: "673c989b-7cda-436b-a249-217c23ab4ed9"
+2026-04-07 09:13:09.944 +01:00 [INF] ConfirmedAt: "2026-04-07T08:13:03.2933660Z"
+2026-04-07 09:13:09.945 +01:00 [INF] IsInStock: true
+2026-04-07 09:13:09.958 +01:00 [INF] PaymentApproved published for OrderId: "fb9ee4f1-1015-4696-8215-25b35fad4bab"
+2026-04-07 09:13:55.864 +01:00 [INF] PaymentService received InventoryConfirmed message
+2026-04-07 09:13:55.864 +01:00 [INF] OrderId: "3e02d90d-3392-4ea8-a120-46ee79c5f15c"
+2026-04-07 09:13:55.864 +01:00 [INF] CustomerId: "ac84f2c9-6581-4247-a45f-59469e61b322"
+2026-04-07 09:13:55.865 +01:00 [INF] ConfirmedAt: "2026-04-07T08:13:55.8578890Z"
+2026-04-07 09:13:55.865 +01:00 [INF] IsInStock: true
+2026-04-07 09:13:55.869 +01:00 [INF] PaymentApproved published for OrderId: "3e02d90d-3392-4ea8-a120-46ee79c5f15c"
+2026-04-07 09:38:17.342 +01:00 [INF] Application is shutting down...
+2026-04-07 09:38:18.024 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:38:18.054 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:38:18.054 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/PaymentService
+2026-04-07 09:38:18.075 +01:00 [INF] PaymentService is waiting for messages...
+2026-04-07 09:41:10.927 +01:00 [INF] Application is shutting down...
+2026-04-07 09:53:06.394 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:53:06.421 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:53:06.422 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/PaymentService
+2026-04-07 09:53:06.442 +01:00 [INF] PaymentService is waiting for messages...
+2026-04-07 10:03:24.440 +01:00 [INF] PaymentService received InventoryConfirmed message
+2026-04-07 10:03:24.440 +01:00 [INF] OrderId: "e691496d-9664-47b8-8ff1-e5518d238fbf"
+2026-04-07 10:03:24.442 +01:00 [INF] CustomerId: "166f54cf-f94f-447f-85c5-14d15a4b36fb"
+2026-04-07 10:03:24.442 +01:00 [INF] ConfirmedAt: "2026-04-07T09:03:24.3908982Z"
+2026-04-07 10:03:24.442 +01:00 [INF] IsInStock: true
+2026-04-07 10:03:24.458 +01:00 [INF] PaymentApproved published for OrderId: "e691496d-9664-47b8-8ff1-e5518d238fbf"
+2026-04-07 10:05:11.778 +01:00 [INF] Application is shutting down...
+2026-04-07 10:05:12.419 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 10:05:12.449 +01:00 [INF] Hosting environment: Development
+2026-04-07 10:05:12.450 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/PaymentService
+2026-04-07 10:05:12.470 +01:00 [INF] PaymentService is waiting for messages...
+2026-04-07 10:51:33.681 +01:00 [INF] Application is shutting down...
+2026-04-07 10:51:34.364 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 10:51:34.394 +01:00 [INF] Hosting environment: Development
+2026-04-07 10:51:34.394 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/PaymentService
+2026-04-07 10:51:34.415 +01:00 [INF] PaymentService is waiting for messages...
+2026-04-07 10:55:59.395 +01:00 [INF] Application is shutting down...
+2026-04-07 10:56:12.349 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 10:56:12.379 +01:00 [INF] Hosting environment: Development
+2026-04-07 10:56:12.379 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/PaymentService
+2026-04-07 10:56:12.399 +01:00 [INF] PaymentService is waiting for messages...
+2026-04-07 11:13:00.412 +01:00 [INF] PaymentService received InventoryConfirmed message
+2026-04-07 11:13:00.413 +01:00 [INF] OrderId: "33013c99-3b39-48bd-86c6-a9d354e9d969"
+2026-04-07 11:13:00.414 +01:00 [INF] CustomerId: "cbe07434-0fb0-434b-b2d9-7437b9221a77"
+2026-04-07 11:13:00.414 +01:00 [INF] ConfirmedAt: "2026-04-07T10:13:00.3601210Z"
+2026-04-07 11:13:00.414 +01:00 [INF] IsInStock: true
+2026-04-07 11:13:00.432 +01:00 [INF] PaymentApproved published for OrderId: "33013c99-3b39-48bd-86c6-a9d354e9d969"
+2026-04-07 11:19:33.952 +01:00 [INF] Application is shutting down...

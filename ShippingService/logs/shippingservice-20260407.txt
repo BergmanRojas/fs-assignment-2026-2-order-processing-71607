@@ -53,3 +53,50 @@ RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified end
 2026-04-07 00:21:30.218 +01:00 [INF] Hosting environment: Development
 2026-04-07 00:21:30.222 +01:00 [INF] Application is shutting down...
 2026-04-07 00:21:30.222 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/ShippingService
+2026-04-07 09:13:13.668 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:13:13.695 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:13:13.695 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/ShippingService
+2026-04-07 09:13:13.717 +01:00 [INF] ShippingService is waiting for messages...
+2026-04-07 09:13:13.751 +01:00 [INF] ShippingService received PaymentApproved message
+2026-04-07 09:13:13.751 +01:00 [INF] OrderId: "fb9ee4f1-1015-4696-8215-25b35fad4bab"
+2026-04-07 09:13:13.752 +01:00 [INF] CustomerId: "673c989b-7cda-436b-a249-217c23ab4ed9"
+2026-04-07 09:13:13.752 +01:00 [INF] ApprovedAt: "2026-04-07T08:13:09.9455140Z"
+2026-04-07 09:13:13.753 +01:00 [INF] IsApproved: true
+2026-04-07 09:13:13.775 +01:00 [INF] ShippingCreated published for OrderId: "fb9ee4f1-1015-4696-8215-25b35fad4bab" with ShipmentReference: SHIP-DECFCDEE
+2026-04-07 09:13:55.870 +01:00 [INF] ShippingService received PaymentApproved message
+2026-04-07 09:13:55.870 +01:00 [INF] OrderId: "3e02d90d-3392-4ea8-a120-46ee79c5f15c"
+2026-04-07 09:13:55.870 +01:00 [INF] CustomerId: "ac84f2c9-6581-4247-a45f-59469e61b322"
+2026-04-07 09:13:55.870 +01:00 [INF] ApprovedAt: "2026-04-07T08:13:55.8651130Z"
+2026-04-07 09:13:55.871 +01:00 [INF] IsApproved: true
+2026-04-07 09:13:55.874 +01:00 [INF] ShippingCreated published for OrderId: "3e02d90d-3392-4ea8-a120-46ee79c5f15c" with ShipmentReference: SHIP-C36D95C4
+2026-04-07 09:38:15.184 +01:00 [INF] Application is shutting down...
+2026-04-07 09:38:15.848 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:38:15.877 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:38:15.878 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/ShippingService
+2026-04-07 09:38:15.900 +01:00 [INF] ShippingService is waiting for messages...
+2026-04-07 09:41:10.927 +01:00 [INF] Application is shutting down...
+2026-04-07 09:53:09.551 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:53:09.577 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:53:09.577 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/ShippingService
+2026-04-07 09:53:09.598 +01:00 [INF] ShippingService is waiting for messages...
+2026-04-07 10:05:09.408 +01:00 [INF] Application is shutting down...
+2026-04-07 10:05:10.385 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 10:05:10.411 +01:00 [INF] Hosting environment: Development
+2026-04-07 10:05:10.411 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/ShippingService
+2026-04-07 10:05:10.429 +01:00 [INF] ShippingService is waiting for messages...
+2026-04-07 10:51:29.647 +01:00 [INF] Application is shutting down...
+2026-04-07 10:51:31.830 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 10:51:31.858 +01:00 [INF] Hosting environment: Development
+2026-04-07 10:51:31.858 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/ShippingService
+2026-04-07 10:51:31.884 +01:00 [INF] ShippingService is waiting for messages...
+2026-04-07 10:55:59.395 +01:00 [INF] Application is shutting down...
+2026-04-07 10:56:14.930 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 10:56:14.959 +01:00 [INF] Hosting environment: Development
+2026-04-07 10:56:14.959 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/ShippingService
+2026-04-07 10:56:14.987 +01:00 [INF] ShippingService is waiting for messages...
+2026-04-07 11:19:31.070 +01:00 [INF] Application is shutting down...
+2026-04-07 13:19:06.106 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 13:19:06.131 +01:00 [INF] Hosting environment: Development
+2026-04-07 13:19:06.132 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/ShippingService
+2026-04-07 13:19:06.152 +01:00 [INF] ShippingService is waiting for messages...
+2026-04-07 15:48:28.162 +01:00 [INF] Application is shutting down...

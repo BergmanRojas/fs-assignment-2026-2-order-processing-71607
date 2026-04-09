@@ -1,0 +1,1008 @@
+2026-04-08 18:09:34.456 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2026-04-08 18:09:34.507 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Orders" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Orders" PRIMARY KEY,
+    "OrderId" TEXT NOT NULL,
+    "CustomerId" TEXT NOT NULL,
+    "Status" TEXT NOT NULL,
+    "CreatedAt" TEXT NOT NULL,
+    "InventoryConfirmedAt" TEXT NULL,
+    "PaymentApprovedAt" TEXT NULL,
+    "ShippingCreatedAt" TEXT NULL,
+    "ShipmentReference" TEXT NULL
+);
+2026-04-08 18:09:34.538 +01:00 [ERR] BackgroundService failed
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed, host 127.0.0.1:5672)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed, host 127.0.0.1:5672
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.OpenAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.CreateAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandlerAsync(AmqpTcpEndpoint endpoint, CancellationToken cancellationToken)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Framing.AutorecoveringConnection.CreateAsync(ConnectionConfig config, IEndpointResolver endpoints, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   at OrderApi.Consumers.InventoryConfirmedConsumer.ExecuteAsync(CancellationToken stoppingToken) in /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi/Consumers/InventoryConfirmedConsumer.cs:line 31
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-04-08 18:09:34.538 +01:00 [ERR] BackgroundService failed
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed, host 127.0.0.1:5672)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed, host 127.0.0.1:5672
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.OpenAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.CreateAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandlerAsync(AmqpTcpEndpoint endpoint, CancellationToken cancellationToken)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Framing.AutorecoveringConnection.CreateAsync(ConnectionConfig config, IEndpointResolver endpoints, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   at OrderApi.Consumers.PaymentApprovedConsumer.ExecuteAsync(CancellationToken stoppingToken) in /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi/Consumers/PaymentApprovedConsumer.cs:line 31
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-04-08 18:09:34.538 +01:00 [ERR] BackgroundService failed
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed, host 127.0.0.1:5672)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed, host 127.0.0.1:5672
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.OpenAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.CreateAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandlerAsync(AmqpTcpEndpoint endpoint, CancellationToken cancellationToken)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Framing.AutorecoveringConnection.CreateAsync(ConnectionConfig config, IEndpointResolver endpoints, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   at OrderApi.Consumers.ShippingCreatedConsumer.ExecuteAsync(CancellationToken stoppingToken) in /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi/Consumers/ShippingCreatedConsumer.cs:line 31
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-04-08 18:09:34.539 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 18:09:34.543 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 18:09:34.543 +01:00 [INF] Hosting environment: Development
+2026-04-08 18:09:34.543 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 18:38:28.510 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 18:38:28.559 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 18:38:28.560 +01:00 [ERR] BackgroundService failed
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed, host 127.0.0.1:5672)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed, host 127.0.0.1:5672
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.OpenAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.CreateAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandlerAsync(AmqpTcpEndpoint endpoint, CancellationToken cancellationToken)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Framing.AutorecoveringConnection.CreateAsync(ConnectionConfig config, IEndpointResolver endpoints, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   at OrderApi.Consumers.ShippingCreatedConsumer.ExecuteAsync(CancellationToken stoppingToken) in /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi/Consumers/ShippingCreatedConsumer.cs:line 31
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-04-08 18:38:28.560 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 18:38:28.560 +01:00 [ERR] BackgroundService failed
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed, host 127.0.0.1:5672)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed, host 127.0.0.1:5672
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.OpenAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.CreateAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandlerAsync(AmqpTcpEndpoint endpoint, CancellationToken cancellationToken)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Framing.AutorecoveringConnection.CreateAsync(ConnectionConfig config, IEndpointResolver endpoints, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   at OrderApi.Consumers.InventoryConfirmedConsumer.ExecuteAsync(CancellationToken stoppingToken) in /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi/Consumers/InventoryConfirmedConsumer.cs:line 31
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-04-08 18:38:28.564 +01:00 [INF] Hosting environment: Development
+2026-04-08 18:38:28.560 +01:00 [ERR] BackgroundService failed
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed, host 127.0.0.1:5672)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed, host 127.0.0.1:5672
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.OpenAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.CreateAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandlerAsync(AmqpTcpEndpoint endpoint, CancellationToken cancellationToken)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Framing.AutorecoveringConnection.CreateAsync(ConnectionConfig config, IEndpointResolver endpoints, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   at OrderApi.Consumers.PaymentApprovedConsumer.ExecuteAsync(CancellationToken stoppingToken) in /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi/Consumers/PaymentApprovedConsumer.cs:line 31
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-04-08 18:38:28.564 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 18:41:07.188 +01:00 [INF] Application is shutting down...
+2026-04-08 18:42:23.041 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 18:42:23.090 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 18:42:23.091 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 18:42:23.091 +01:00 [INF] Hosting environment: Development
+2026-04-08 18:42:23.091 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 18:42:23.118 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 18:42:23.118 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 18:42:23.118 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 18:43:10.062 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 18:43:10.082 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 18:43:10.085 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 18:43:10.096 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 18:43:10.104 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 18:43:10.105 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 43.3598ms
+2026-04-08 18:46:42.556 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-08 18:46:42.557 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-08 18:46:42.628 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Guid), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (DbType = DateTime), @p8='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Orders" ("Id", "CreatedAt", "CustomerId", "InventoryConfirmedAt", "OrderId", "PaymentApprovedAt", "ShipmentReference", "ShippingCreatedAt", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-04-08 18:46:42.632 +01:00 [INF] Order created with OrderId: "742a80b5-4011-456a-b1f3-44e248ef4c51" for CustomerId: "26c8e8c2-b83c-49dc-8577-ea953735bfe9"
+2026-04-08 18:46:42.644 +01:00 [INF] OrderSubmitted event published for OrderId: "742a80b5-4011-456a-b1f3-44e248ef4c51"
+2026-04-08 18:46:42.654 +01:00 [INF] OrderSubmitted event published for OrderId: "742a80b5-4011-456a-b1f3-44e248ef4c51"
+2026-04-08 18:46:42.655 +01:00 [INF] Setting HTTP status code 201.
+2026-04-08 18:46:42.656 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-08 18:46:42.656 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-08 18:46:42.657 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 101.3445ms
+2026-04-08 18:46:42.692 +01:00 [INF] Order "742a80b5-4011-456a-b1f3-44e248ef4c51" marked as InventoryConfirmed
+2026-04-08 18:46:42.721 +01:00 [INF] Order "742a80b5-4011-456a-b1f3-44e248ef4c51" marked as PaymentApproved
+2026-04-08 18:46:42.761 +01:00 [INF] Order "742a80b5-4011-456a-b1f3-44e248ef4c51" marked as Completed after shipping creation
+2026-04-08 18:46:57.104 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-08 18:46:57.105 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-08 18:46:57.178 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-08 18:46:57.180 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 18:46:57.183 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-08 18:46:57.184 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-08 18:46:57.184 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 80.3192ms
+2026-04-08 18:47:27.207 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - null null
+2026-04-08 18:47:27.209 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - 404 0 null 1.8159ms
+2026-04-08 18:47:27.211 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/TU_ORDER_ID/status, Response status code: 404
+2026-04-08 18:47:36.718 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/742a80b5-4011-456a-b1f3-44e248ef4c51/status - null null
+2026-04-08 18:47:36.719 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-08 18:47:36.747 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__id_0
+LIMIT 1
+2026-04-08 18:47:36.747 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 18:47:36.747 +01:00 [INF] Writing value of type '<>f__AnonymousType2`7' as Json.
+2026-04-08 18:47:36.748 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-08 18:47:36.748 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/742a80b5-4011-456a-b1f3-44e248ef4c51/status - 200 null application/json; charset=utf-8 29.4715ms
+2026-04-08 18:54:32.210 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 18:54:32.260 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 18:54:32.261 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 18:54:32.261 +01:00 [INF] Hosting environment: Development
+2026-04-08 18:54:32.261 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 18:54:32.286 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 18:54:32.286 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 18:54:32.286 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 18:54:44.759 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 18:54:44.780 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 18:54:44.781 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 18:54:44.792 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 18:54:44.800 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 18:54:44.800 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 41.9065ms
+2026-04-08 18:54:44.808 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-08 18:54:44.809 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-08 18:54:44.875 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Guid), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (DbType = DateTime), @p8='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Orders" ("Id", "CreatedAt", "CustomerId", "InventoryConfirmedAt", "OrderId", "PaymentApprovedAt", "ShipmentReference", "ShippingCreatedAt", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-04-08 18:54:44.880 +01:00 [INF] Order created with OrderId: "86748bc3-676d-494d-8648-c687331d14b0" for CustomerId: "658fb095-edfa-4a54-afe5-a7874e4f566d"
+2026-04-08 18:54:44.890 +01:00 [INF] OrderSubmitted event published for OrderId: "86748bc3-676d-494d-8648-c687331d14b0"
+2026-04-08 18:54:44.901 +01:00 [INF] OrderSubmitted event published for OrderId: "86748bc3-676d-494d-8648-c687331d14b0"
+2026-04-08 18:54:44.902 +01:00 [INF] Setting HTTP status code 201.
+2026-04-08 18:54:44.903 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-08 18:54:44.903 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-08 18:54:44.905 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 97.1567ms
+2026-04-08 18:54:44.912 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-08 18:54:44.913 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-08 18:54:44.979 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-08 18:54:44.980 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__shippingCreated_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__shippingCreated_OrderId_0
+LIMIT 1
+2026-04-08 18:54:44.980 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__inventoryConfirmed_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__inventoryConfirmed_OrderId_0
+LIMIT 1
+2026-04-08 18:54:44.980 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__paymentApproved_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__paymentApproved_OrderId_0
+LIMIT 1
+2026-04-08 18:54:44.983 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 18:54:44.985 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "PaymentApprovedAt" = @p0, "Status" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2026-04-08 18:54:44.986 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-08 18:54:44.986 +01:00 [INF] Order "86748bc3-676d-494d-8648-c687331d14b0" updated after payment approval. Status: Payment Approved
+2026-04-08 18:54:44.987 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-08 18:54:44.987 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 75.4178ms
+2026-04-08 18:54:45.136 +01:00 [INF] Executed DbCommand (151ms) [Parameters=[@p3='?' (DbType = Guid), @p0='?' (Size = 13), @p1='?' (DbType = DateTime), @p2='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "ShipmentReference" = @p0, "ShippingCreatedAt" = @p1, "Status" = @p2
+WHERE "Id" = @p3
+RETURNING 1;
+2026-04-08 18:54:45.137 +01:00 [INF] Order "86748bc3-676d-494d-8648-c687331d14b0" marked as Completed after shipping creation
+2026-04-08 18:54:45.287 +01:00 [INF] Executed DbCommand (302ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (Size = 19)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "InventoryConfirmedAt" = @p0, "Status" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2026-04-08 18:54:45.288 +01:00 [INF] Order "86748bc3-676d-494d-8648-c687331d14b0" updated after inventory confirmation. Status: Inventory Confirmed
+2026-04-08 18:55:34.750 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/86748bc3-676d-494d-8648-c687331d14b0/status - null null
+2026-04-08 18:55:34.750 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-08 18:55:34.755 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__id_0
+LIMIT 1
+2026-04-08 18:55:34.755 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 18:55:34.757 +01:00 [INF] Writing value of type '<>f__AnonymousType2`7' as Json.
+2026-04-08 18:55:34.758 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-08 18:55:34.758 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/86748bc3-676d-494d-8648-c687331d14b0/status - 200 null application/json; charset=utf-8 8.1122ms
+2026-04-08 18:55:47.234 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 18:55:47.234 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 18:55:47.234 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 18:55:47.235 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 18:55:47.235 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 18:55:47.235 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 0.7922ms
+2026-04-08 20:00:46.579 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 20:00:46.632 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 20:00:46.633 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 20:00:46.633 +01:00 [INF] Hosting environment: Development
+2026-04-08 20:00:46.633 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 20:00:46.657 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 20:00:46.657 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 20:00:46.657 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 20:00:50.181 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 20:00:50.200 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 20:00:50.201 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 20:00:50.212 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 20:00:50.219 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 20:00:50.219 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 39.352ms
+2026-04-08 20:00:50.227 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-08 20:00:50.228 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-08 20:00:50.299 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Guid), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (DbType = DateTime), @p8='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Orders" ("Id", "CreatedAt", "CustomerId", "InventoryConfirmedAt", "OrderId", "PaymentApprovedAt", "ShipmentReference", "ShippingCreatedAt", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-04-08 20:00:50.303 +01:00 [INF] Order created with OrderId: "8bc27988-bbd3-4624-b180-f4ee81096b9f" for CustomerId: "35bd997b-41df-4ba9-ab18-2e4a02fa88ec"
+2026-04-08 20:00:50.314 +01:00 [INF] OrderSubmitted event published for OrderId: "8bc27988-bbd3-4624-b180-f4ee81096b9f"
+2026-04-08 20:00:50.324 +01:00 [INF] OrderSubmitted event published for OrderId: "8bc27988-bbd3-4624-b180-f4ee81096b9f"
+2026-04-08 20:00:50.324 +01:00 [INF] Setting HTTP status code 201.
+2026-04-08 20:00:50.325 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-08 20:00:50.326 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-08 20:00:50.327 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 100.0335ms
+2026-04-08 20:00:50.334 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-08 20:00:50.335 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-08 20:00:50.418 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-08 20:00:50.419 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__paymentApproved_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__paymentApproved_OrderId_0
+LIMIT 1
+2026-04-08 20:00:50.419 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__inventoryConfirmed_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__inventoryConfirmed_OrderId_0
+LIMIT 1
+2026-04-08 20:00:50.422 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 20:00:50.424 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (Size = 19)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "InventoryConfirmedAt" = @p0, "Status" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2026-04-08 20:00:50.425 +01:00 [INF] Order "8bc27988-bbd3-4624-b180-f4ee81096b9f" updated after inventory confirmation. Status: Inventory Confirmed
+2026-04-08 20:00:50.426 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-08 20:00:50.427 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-08 20:00:50.428 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 93.3849ms
+2026-04-08 20:00:50.436 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__shippingCreated_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__shippingCreated_OrderId_0
+LIMIT 1
+2026-04-08 20:00:50.436 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - null null
+2026-04-08 20:00:50.436 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p3='?' (DbType = Guid), @p0='?' (Size = 13), @p1='?' (DbType = DateTime), @p2='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "ShipmentReference" = @p0, "ShippingCreatedAt" = @p1, "Status" = @p2
+WHERE "Id" = @p3
+RETURNING 1;
+2026-04-08 20:00:50.436 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - 404 0 null 0.8593ms
+2026-04-08 20:00:50.437 +01:00 [INF] Order "8bc27988-bbd3-4624-b180-f4ee81096b9f" marked as Completed after shipping creation
+2026-04-08 20:00:50.437 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/TU_ORDER_ID/status, Response status code: 404
+2026-04-08 20:00:50.575 +01:00 [INF] Executed DbCommand (151ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "PaymentApprovedAt" = @p0, "Status" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2026-04-08 20:00:50.576 +01:00 [INF] Order "8bc27988-bbd3-4624-b180-f4ee81096b9f" updated after payment approval. Status: Payment Approved
+2026-04-08 20:01:14.450 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - null null
+2026-04-08 20:01:14.451 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - 404 0 null 0.4242ms
+2026-04-08 20:01:14.451 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/TU_ORDER_ID/status, Response status code: 404
+2026-04-08 20:01:20.463 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/8bc27988-bbd3-4624-b180-f4ee81096b9/status - null null
+2026-04-08 20:01:20.464 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/8bc27988-bbd3-4624-b180-f4ee81096b9/status - 404 0 null 0.316ms
+2026-04-08 20:01:20.464 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/8bc27988-bbd3-4624-b180-f4ee81096b9/status, Response status code: 404
+2026-04-08 20:01:41.563 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/8bc27988-bbd3-4624-b180-f4ee81096b9/status - null null
+2026-04-08 20:01:41.563 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/8bc27988-bbd3-4624-b180-f4ee81096b9/status - 404 0 null 0.3577ms
+2026-04-08 20:01:41.563 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/8bc27988-bbd3-4624-b180-f4ee81096b9/status, Response status code: 404
+2026-04-08 20:02:04.756 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/customerId:35bd997b-41df-4ba9-ab18-2e4a02fa88ec/status - null null
+2026-04-08 20:02:04.756 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/customerId:35bd997b-41df-4ba9-ab18-2e4a02fa88ec/status - 404 0 null 0.3449ms
+2026-04-08 20:02:04.757 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/customerId:35bd997b-41df-4ba9-ab18-2e4a02fa88ec/status, Response status code: 404
+2026-04-08 20:02:32.511 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/35bd997b-41df-4ba9-ab18-2e4a02fa88ec/status - null null
+2026-04-08 20:02:32.512 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-08 20:02:32.516 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__id_0
+LIMIT 1
+2026-04-08 20:02:32.516 +01:00 [INF] Setting HTTP status code 404.
+2026-04-08 20:02:32.517 +01:00 [INF] Writing value of type '<>f__AnonymousType1`1' as Json.
+2026-04-08 20:02:32.518 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-08 20:02:32.518 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/35bd997b-41df-4ba9-ab18-2e4a02fa88ec/status - 404 null application/json; charset=utf-8 6.3502ms
+2026-04-08 20:02:47.891 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-08 20:02:47.891 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-08 20:02:47.893 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Guid), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (DbType = DateTime), @p8='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Orders" ("Id", "CreatedAt", "CustomerId", "InventoryConfirmedAt", "OrderId", "PaymentApprovedAt", "ShipmentReference", "ShippingCreatedAt", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-04-08 20:02:47.893 +01:00 [INF] Order created with OrderId: "5666cb3f-8cc4-4873-a987-36c3b6e4fd69" for CustomerId: "18945f78-4d57-4bd9-96aa-977bdb418d9a"
+2026-04-08 20:02:47.897 +01:00 [INF] OrderSubmitted event published for OrderId: "5666cb3f-8cc4-4873-a987-36c3b6e4fd69"
+2026-04-08 20:02:47.898 +01:00 [INF] OrderSubmitted event published for OrderId: "5666cb3f-8cc4-4873-a987-36c3b6e4fd69"
+2026-04-08 20:02:47.898 +01:00 [INF] Setting HTTP status code 201.
+2026-04-08 20:02:47.898 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-08 20:02:47.899 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-08 20:02:47.899 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 7.3584ms
+2026-04-08 20:02:47.903 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__inventoryConfirmed_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__inventoryConfirmed_OrderId_0
+LIMIT 1
+2026-04-08 20:02:47.903 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (Size = 19)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "InventoryConfirmedAt" = @p0, "Status" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2026-04-08 20:02:47.904 +01:00 [INF] Order "5666cb3f-8cc4-4873-a987-36c3b6e4fd69" updated after inventory confirmation. Status: Inventory Confirmed
+2026-04-08 20:02:47.905 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__paymentApproved_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__paymentApproved_OrderId_0
+LIMIT 1
+2026-04-08 20:02:47.906 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "PaymentApprovedAt" = @p0, "Status" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2026-04-08 20:02:47.906 +01:00 [INF] Order "5666cb3f-8cc4-4873-a987-36c3b6e4fd69" updated after payment approval. Status: Payment Approved
+2026-04-08 20:02:47.907 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-08 20:02:47.907 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-08 20:02:47.908 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-08 20:02:47.908 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 20:02:47.908 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-08 20:02:47.908 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-08 20:02:47.908 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 0.9391ms
+2026-04-08 20:02:47.908 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__shippingCreated_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__shippingCreated_OrderId_0
+LIMIT 1
+2026-04-08 20:02:47.909 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p3='?' (DbType = Guid), @p0='?' (Size = 13), @p1='?' (DbType = DateTime), @p2='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "ShipmentReference" = @p0, "ShippingCreatedAt" = @p1, "Status" = @p2
+WHERE "Id" = @p3
+RETURNING 1;
+2026-04-08 20:02:47.909 +01:00 [INF] Order "5666cb3f-8cc4-4873-a987-36c3b6e4fd69" marked as Completed after shipping creation
+2026-04-08 20:03:29.199 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/5666cb3f-8cc4-4873-a987-36c3b6e4fd69/status - null null
+2026-04-08 20:03:29.199 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-08 20:03:29.200 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__id_0
+LIMIT 1
+2026-04-08 20:03:29.200 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 20:03:29.201 +01:00 [INF] Writing value of type '<>f__AnonymousType2`7' as Json.
+2026-04-08 20:03:29.201 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-08 20:03:29.201 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/5666cb3f-8cc4-4873-a987-36c3b6e4fd69/status - 200 null application/json; charset=utf-8 2.1531ms
+2026-04-08 20:09:04.914 +01:00 [INF] Application is shutting down...
+ters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 20:08:57.938 +01:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5258: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (48): Address already in use
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-04-08 20:09:13.225 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 20:09:13.272 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 20:09:13.274 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 20:09:13.274 +01:00 [INF] Hosting environment: Development
+2026-04-08 20:09:13.274 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 20:09:13.297 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 20:09:13.297 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 20:09:13.297 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 20:11:48.600 +01:00 [INF] Application is shutting down...
+2026-04-08 20:11:58.528 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 20:11:58.576 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 20:11:58.578 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 20:11:58.578 +01:00 [INF] Hosting environment: Development
+2026-04-08 20:11:58.578 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 20:11:58.601 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 20:11:58.601 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 20:11:58.601 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 20:17:11.384 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 20:17:11.406 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 20:17:11.407 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 20:17:11.418 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 20:17:11.425 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 20:17:11.426 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 42.467ms
+2026-04-08 20:23:42.421 +01:00 [INF] Application is shutting down...
+2026-04-08 20:23:50.447 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 20:23:50.496 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 20:23:50.497 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 20:23:50.498 +01:00 [INF] Hosting environment: Development
+2026-04-08 20:23:50.498 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 20:23:50.521 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 20:23:50.521 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 20:23:50.521 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 20:35:17.051 +01:00 [INF] Application is shutting down...
+2026-04-08 20:35:24.210 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 20:35:24.259 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 20:35:24.260 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 20:35:24.261 +01:00 [INF] Hosting environment: Development
+2026-04-08 20:35:24.261 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 20:35:24.282 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 20:35:24.282 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 20:35:24.282 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 20:48:55.308 +01:00 [INF] Application is shutting down...
+2026-04-08 20:49:03.372 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 20:49:03.418 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 20:49:03.420 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 20:49:03.420 +01:00 [INF] Hosting environment: Development
+2026-04-08 20:49:03.420 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 20:49:03.442 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 20:49:03.442 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 20:49:03.442 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 20:50:07.278 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 20:50:07.293 +01:00 [INF] CORS policy execution successful.
+2026-04-08 20:50:07.299 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 20:50:07.300 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 20:50:07.311 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 20:50:07.317 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 20:50:07.318 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 40.1475ms
+2026-04-08 20:50:13.403 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-08 20:50:13.406 +01:00 [INF] CORS policy execution successful.
+2026-04-08 20:50:13.407 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-08 20:50:13.499 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-08 20:50:13.516 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 20:50:13.521 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-08 20:50:13.523 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-08 20:50:13.524 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 122.0302ms
+2026-04-08 20:50:16.729 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 20:50:16.730 +01:00 [INF] CORS policy execution successful.
+2026-04-08 20:50:16.731 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 20:50:16.731 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 20:50:16.732 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 20:50:16.733 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 20:50:16.734 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 4.9205ms
+2026-04-08 20:51:52.706 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 20:51:52.707 +01:00 [INF] CORS policy execution successful.
+2026-04-08 20:51:52.707 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 20:51:52.707 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 20:51:52.707 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 20:51:52.708 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 20:51:52.708 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 1.3025ms
+2026-04-08 20:53:20.038 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-08 20:53:20.039 +01:00 [INF] CORS policy execution successful.
+2026-04-08 20:53:20.040 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-08 20:53:20.079 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-08 20:53:20.079 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 20:53:20.079 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-08 20:53:20.079 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-08 20:53:20.079 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 41.1914ms
+2026-04-08 20:58:48.849 +01:00 [INF] Application is shutting down...
+2026-04-08 20:58:57.003 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 20:58:57.050 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 20:58:57.052 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 20:58:57.052 +01:00 [INF] Hosting environment: Development
+2026-04-08 20:58:57.052 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 20:58:57.073 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 20:58:57.073 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 20:58:57.073 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 21:04:16.294 +01:00 [INF] Application is shutting down...
+2026-04-08 21:04:26.866 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 21:04:26.916 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 21:04:26.917 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 21:04:26.917 +01:00 [INF] Hosting environment: Development
+2026-04-08 21:04:26.917 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 21:04:26.939 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 21:04:26.939 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 21:04:26.939 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 21:04:39.775 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 21:04:39.790 +01:00 [INF] CORS policy execution successful.
+2026-04-08 21:04:39.796 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 21:04:39.797 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 21:04:39.811 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 21:04:39.818 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 21:04:39.819 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 44.5538ms
+2026-04-08 21:04:47.942 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-08 21:04:47.944 +01:00 [INF] CORS policy execution successful.
+2026-04-08 21:04:47.946 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-08 21:04:48.040 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+2026-04-08 21:04:48.058 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 21:04:48.063 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-08 21:04:48.066 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-08 21:04:48.067 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 125.2511ms
+2026-04-08 21:04:50.990 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 21:04:50.991 +01:00 [INF] CORS policy execution successful.
+2026-04-08 21:04:50.992 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 21:04:50.992 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 21:04:50.993 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 21:04:50.994 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 21:04:50.994 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 3.5943ms
+2026-04-08 21:21:36.106 +01:00 [INF] Application is shutting down...
+2026-04-08 21:21:40.162 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 21:21:40.212 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 21:21:40.213 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 21:21:40.214 +01:00 [INF] Hosting environment: Development
+2026-04-08 21:21:40.214 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 21:21:40.237 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 21:21:40.237 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 21:21:40.237 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 21:21:57.068 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 21:21:57.082 +01:00 [INF] CORS policy execution successful.
+2026-04-08 21:21:57.089 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 21:21:57.090 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 21:21:57.100 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 21:21:57.107 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 21:21:57.107 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 40.377ms
+2026-04-08 21:22:20.395 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-08 21:22:20.396 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-08 21:22:20.466 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Guid), @p3='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (DbType = DateTime), @p8='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Orders" ("Id", "CreatedAt", "CustomerId", "InventoryConfirmedAt", "OrderId", "PaymentApprovedAt", "ShipmentReference", "ShippingCreatedAt", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-04-08 21:22:20.471 +01:00 [INF] Order created with OrderId: "e7ef26e9-3311-469f-a3b4-32666396436f" for CustomerId: "fd00e9de-5a28-4862-b506-7f6ce5e1d577"
+2026-04-08 21:22:20.482 +01:00 [INF] OrderSubmitted event published for OrderId: "e7ef26e9-3311-469f-a3b4-32666396436f"
+2026-04-08 21:22:20.494 +01:00 [INF] OrderSubmitted event published for OrderId: "e7ef26e9-3311-469f-a3b4-32666396436f"
+2026-04-08 21:22:20.494 +01:00 [INF] Setting HTTP status code 201.
+2026-04-08 21:22:20.495 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-08 21:22:20.496 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-08 21:22:20.497 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 102.5173ms
+2026-04-08 21:22:20.599 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__inventoryConfirmed_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__inventoryConfirmed_OrderId_0
+LIMIT 1
+2026-04-08 21:22:20.599 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__paymentApproved_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__paymentApproved_OrderId_0
+LIMIT 1
+2026-04-08 21:22:20.599 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__shippingCreated_OrderId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__shippingCreated_OrderId_0
+LIMIT 1
+2026-04-08 21:22:20.604 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p3='?' (DbType = Guid), @p0='?' (Size = 13), @p1='?' (DbType = DateTime), @p2='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "ShipmentReference" = @p0, "ShippingCreatedAt" = @p1, "Status" = @p2
+WHERE "Id" = @p3
+RETURNING 1;
+2026-04-08 21:22:20.605 +01:00 [INF] Order "e7ef26e9-3311-469f-a3b4-32666396436f" marked as Completed after shipping creation
+2026-04-08 21:22:20.755 +01:00 [INF] Executed DbCommand (151ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (Size = 19)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "InventoryConfirmedAt" = @p0, "Status" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2026-04-08 21:22:20.756 +01:00 [INF] Order "e7ef26e9-3311-469f-a3b4-32666396436f" updated after inventory confirmation. Status: Inventory Confirmed
+2026-04-08 21:22:20.906 +01:00 [INF] Executed DbCommand (302ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Orders" SET "PaymentApprovedAt" = @p0, "Status" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2026-04-08 21:22:20.907 +01:00 [INF] Order "e7ef26e9-3311-469f-a3b4-32666396436f" updated after payment approval. Status: Payment Approved
+2026-04-08 21:27:46.572 +01:00 [INF] Application is shutting down...
+2026-04-08 21:27:57.067 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 21:27:57.114 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 21:27:57.115 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 21:27:57.115 +01:00 [INF] Hosting environment: Development
+2026-04-08 21:27:57.115 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 21:27:57.138 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 21:27:57.138 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 21:27:57.138 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 21:29:08.812 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/e7ef26e9-3311-469f-a3b4-32666396436f/status - null null
+2026-04-08 21:29:08.826 +01:00 [INF] CORS policy execution successful.
+2026-04-08 21:29:08.833 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-08 21:29:08.934 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreatedAt", "o"."CustomerId", "o"."InventoryConfirmedAt", "o"."OrderId", "o"."PaymentApprovedAt", "o"."ShipmentReference", "o"."ShippingCreatedAt", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__id_0
+LIMIT 1
+2026-04-08 21:29:08.953 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 21:29:08.964 +01:00 [INF] Writing value of type '<>f__AnonymousType2`7' as Json.
+2026-04-08 21:29:08.973 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-08 21:29:08.975 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/e7ef26e9-3311-469f-a3b4-32666396436f/status - 200 null application/json; charset=utf-8 163.1492ms
+2026-04-08 21:41:17.075 +01:00 [INF] Application is shutting down...
+2026-04-08 21:41:40.070 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-04-08 21:41:40.116 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 21:41:40.117 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 21:41:40.118 +01:00 [INF] Hosting environment: Development
+2026-04-08 21:41:40.118 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 21:41:40.139 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 21:41:40.139 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 21:41:40.139 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 21:44:24.614 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 21:44:24.631 +01:00 [INF] CORS policy execution successful.
+2026-04-08 21:44:24.638 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 21:44:24.640 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 21:44:24.652 +01:00 [INF] Writing value of type '<>f__AnonymousType0`2' as Json.
+2026-04-08 21:44:24.660 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 21:44:24.660 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 46.439ms
+2026-04-08 21:46:34.946 +01:00 [INF] Application is shutting down...
+2026-04-08 23:29:50.064 +01:00 [INF] No migrations were found in assembly 'OrderApi'. A migration needs to be added before the database can be updated.
+2026-04-08 23:29:50.097 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-04-08 23:29:50.108 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2026-04-08 23:29:50.111 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsLock" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK___EFMigrationsLock" PRIMARY KEY,
+    "Timestamp" TEXT NOT NULL
+);
+2026-04-08 23:29:50.111 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-04-08 22:29:50.111725+00:00');
+SELECT changes();
+2026-04-08 23:29:50.150 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2026-04-08 23:29:50.152 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-04-08 23:29:50.152 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-04-08 23:29:50.154 +01:00 [INF] No migrations were applied. The database is already up to date.
+2026-04-08 23:29:50.154 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2026-04-08 23:29:50.229 +01:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Products" AS "p")
+2026-04-08 23:29:50.234 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'OrderApi.Data.OrderDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Products'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Products'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2026-04-08 23:37:18.710 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2026-04-08 23:37:18.734 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-04-08 23:37:18.736 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2026-04-08 23:37:18.737 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsLock" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK___EFMigrationsLock" PRIMARY KEY,
+    "Timestamp" TEXT NOT NULL
+);
+2026-04-08 23:37:18.737 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-04-08 22:37:18.737376+00:00');
+SELECT changes();
+2026-04-08 23:37:18.756 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2026-04-08 23:37:18.759 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-04-08 23:37:18.760 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-04-08 23:37:18.763 +01:00 [INF] Applying migration '20260408223707_InitialSchema'.
+2026-04-08 23:37:18.766 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Orders" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Orders" PRIMARY KEY,
+    "OrderId" TEXT NOT NULL,
+    "CustomerId" TEXT NOT NULL,
+    "Status" TEXT NOT NULL,
+    "CreatedAt" TEXT NOT NULL,
+    "InventoryConfirmedAt" TEXT NULL,
+    "PaymentApprovedAt" TEXT NULL,
+    "ShippingCreatedAt" TEXT NULL,
+    "ShipmentReference" TEXT NULL
+);
+2026-04-08 23:37:18.766 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Products" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Products" PRIMARY KEY,
+    "Name" TEXT NOT NULL,
+    "Description" TEXT NOT NULL,
+    "Price" TEXT NOT NULL,
+    "StockQuantity" INTEGER NOT NULL,
+    "ImageUrl" TEXT NOT NULL
+);
+2026-04-08 23:37:18.766 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20260408223707_InitialSchema', '9.0.7');
+2026-04-08 23:37:18.767 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2026-04-08 23:37:37.411 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-04-08 23:37:37.441 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2026-04-08 23:37:37.443 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-04-08 22:37:37.442688+00:00');
+SELECT changes();
+2026-04-08 23:37:37.463 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2026-04-08 23:37:37.465 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-04-08 23:37:37.466 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-04-08 23:37:37.468 +01:00 [INF] No migrations were applied. The database is already up to date.
+2026-04-08 23:37:37.468 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2026-04-08 23:37:37.536 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Products" AS "p")
+2026-04-08 23:37:37.575 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 51), @p2='?' (Size = 55), @p3='?' (Size = 14), @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Id", "Description", "ImageUrl", "Name", "Price", "StockQuantity")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-04-08 23:37:37.575 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (Size = 50), @p3='?' (Size = 9), @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Id", "Description", "ImageUrl", "Name", "Price", "StockQuantity")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-04-08 23:37:37.575 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 49), @p2='?' (Size = 51), @p3='?' (Size = 27), @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Id", "Description", "ImageUrl", "Name", "Price", "StockQuantity")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-04-08 23:37:37.575 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 49), @p2='?' (Size = 53), @p3='?' (Size = 12), @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Id", "Description", "ImageUrl", "Name", "Price", "StockQuantity")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-04-08 23:37:37.575 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 46), @p2='?' (Size = 50), @p3='?' (Size = 9), @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Id", "Description", "ImageUrl", "Name", "Price", "StockQuantity")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-04-08 23:37:37.575 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (Size = 60), @p3='?' (Size = 19), @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Id", "Description", "ImageUrl", "Name", "Price", "StockQuantity")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-04-08 23:37:37.608 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 23:37:37.609 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 23:37:37.609 +01:00 [INF] Hosting environment: Development
+2026-04-08 23:37:37.609 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 23:37:37.633 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 23:37:37.633 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 23:37:37.633 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 23:37:58.395 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-08 23:37:58.416 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-08 23:37:58.441 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-08 23:37:58.446 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 23:37:58.454 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-08 23:37:58.468 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-08 23:37:58.470 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 75.2973ms
+2026-04-08 23:40:12.968 +01:00 [INF] Application is shutting down...
+2026-04-08 23:41:13.237 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-04-08 23:41:13.269 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2026-04-08 23:41:13.272 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-04-08 22:41:13.271208+00:00');
+SELECT changes();
+2026-04-08 23:41:13.293 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2026-04-08 23:41:13.295 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-04-08 23:41:13.296 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-04-08 23:41:13.298 +01:00 [INF] No migrations were applied. The database is already up to date.
+2026-04-08 23:41:13.298 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2026-04-08 23:41:13.372 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Products" AS "p")
+2026-04-08 23:41:13.397 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 23:41:13.398 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 23:41:13.399 +01:00 [INF] Hosting environment: Development
+2026-04-08 23:41:13.399 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 23:41:13.424 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 23:41:13.424 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 23:41:13.424 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 23:44:16.796 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 23:44:16.813 +01:00 [INF] CORS policy execution successful.
+2026-04-08 23:44:16.820 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 23:44:16.821 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 23:44:16.834 +01:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-04-08 23:44:16.841 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 23:44:16.842 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 46.2817ms
+2026-04-08 23:48:01.015 +01:00 [INF] Application is shutting down...
+2026-04-08 23:48:19.381 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-04-08 23:48:19.411 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2026-04-08 23:48:19.413 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-04-08 22:48:19.412957+00:00');
+SELECT changes();
+2026-04-08 23:48:19.433 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2026-04-08 23:48:19.435 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-04-08 23:48:19.435 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-04-08 23:48:19.437 +01:00 [INF] No migrations were applied. The database is already up to date.
+2026-04-08 23:48:19.437 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2026-04-08 23:48:19.507 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Products" AS "p")
+2026-04-08 23:48:19.532 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 23:48:19.533 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 23:48:19.533 +01:00 [INF] Hosting environment: Development
+2026-04-08 23:48:19.533 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 23:48:19.560 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 23:48:19.560 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-08 23:48:19.560 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 23:48:26.528 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 23:48:26.544 +01:00 [INF] CORS policy execution successful.
+2026-04-08 23:48:26.550 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 23:48:26.551 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 23:48:26.563 +01:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-04-08 23:48:26.571 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 23:48:26.571 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 43.9632ms
+2026-04-08 23:48:47.474 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 23:48:47.475 +01:00 [INF] CORS policy execution successful.
+2026-04-08 23:48:47.476 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 23:48:47.477 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 23:48:47.481 +01:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-04-08 23:48:47.482 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 23:48:47.482 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 8.1099ms
+2026-04-08 23:56:08.072 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-08 23:56:08.072 +01:00 [INF] CORS policy execution successful.
+2026-04-08 23:56:08.073 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-08 23:56:08.073 +01:00 [INF] Setting HTTP status code 200.
+2026-04-08 23:56:08.073 +01:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-04-08 23:56:08.073 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-08 23:56:08.073 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 1.7882ms
+2026-04-08 23:59:43.015 +01:00 [INF] Application is shutting down...
+2026-04-08 23:59:46.785 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-04-08 23:59:46.820 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2026-04-08 23:59:46.823 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-04-08 22:59:46.822288+00:00');
+SELECT changes();
+2026-04-08 23:59:46.844 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2026-04-08 23:59:46.846 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-04-08 23:59:46.846 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-04-08 23:59:46.848 +01:00 [INF] No migrations were applied. The database is already up to date.
+2026-04-08 23:59:46.849 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2026-04-08 23:59:46.921 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Products" AS "p")
+2026-04-08 23:59:46.948 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-08 23:59:46.949 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-08 23:59:46.949 +01:00 [INF] Hosting environment: Development
+2026-04-08 23:59:46.949 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-08 23:59:46.978 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-08 23:59:46.978 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-08 23:59:46.978 +01:00 [INF] OrderApi is waiting for shipping-created messages...

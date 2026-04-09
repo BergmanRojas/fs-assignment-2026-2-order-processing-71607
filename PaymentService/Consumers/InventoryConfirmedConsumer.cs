@@ -31,12 +31,26 @@ public class InventoryConfirmedConsumer : BackgroundService
         var connection = await factory.CreateConnectionAsync(stoppingToken);
         var channel = await connection.CreateChannelAsync(cancellationToken: stoppingToken);
 
+        await channel.ExchangeDeclareAsync(
+            exchange: "inventory-confirmed-exchange",
+            type: ExchangeType.Fanout,
+            durable: false,
+            autoDelete: false,
+            arguments: null,
+            cancellationToken: stoppingToken);
+
         await channel.QueueDeclareAsync(
-            queue: "inventory-confirmed",
+            queue: "inventory-confirmed-payment",
             durable: false,
             exclusive: false,
             autoDelete: false,
             arguments: null,
+            cancellationToken: stoppingToken);
+
+        await channel.QueueBindAsync(
+            queue: "inventory-confirmed-payment",
+            exchange: "inventory-confirmed-exchange",
+            routingKey: string.Empty,
             cancellationToken: stoppingToken);
 
         var consumer = new AsyncEventingBasicConsumer(channel);
@@ -67,11 +81,14 @@ public class InventoryConfirmedConsumer : BackgroundService
                 await _publisher.PublishPaymentApproved(paymentApproved);
             }
 
-            await channel.BasicAckAsync(ea.DeliveryTag, multiple: false, cancellationToken: stoppingToken);
+            await channel.BasicAckAsync(
+                ea.DeliveryTag,
+                multiple: false,
+                cancellationToken: stoppingToken);
         };
 
         await channel.BasicConsumeAsync(
-            queue: "inventory-confirmed",
+            queue: "inventory-confirmed-payment",
             autoAck: false,
             consumer: consumer,
             cancellationToken: stoppingToken);

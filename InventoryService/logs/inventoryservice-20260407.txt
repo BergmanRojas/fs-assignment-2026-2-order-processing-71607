@@ -161,3 +161,53 @@ RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified end
 2026-04-07 00:25:01.526 +01:00 [INF] Hosting environment: Development
 2026-04-07 00:25:01.529 +01:00 [INF] Application is shutting down...
 2026-04-07 00:25:01.529 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/InventoryService
+2026-04-07 09:13:03.209 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:13:03.235 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:13:03.236 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/InventoryService
+2026-04-07 09:13:03.258 +01:00 [INF] InventoryService is waiting for messages...
+2026-04-07 09:13:03.291 +01:00 [INF] InventoryService received OrderSubmitted message
+2026-04-07 09:13:03.291 +01:00 [INF] OrderId: "fb9ee4f1-1015-4696-8215-25b35fad4bab"
+2026-04-07 09:13:03.292 +01:00 [INF] CustomerId: "673c989b-7cda-436b-a249-217c23ab4ed9"
+2026-04-07 09:13:03.292 +01:00 [INF] SubmittedAt: "2026-04-07T08:08:40.5504480Z"
+2026-04-07 09:13:03.314 +01:00 [INF] InventoryConfirmed published for OrderId: "fb9ee4f1-1015-4696-8215-25b35fad4bab"
+2026-04-07 09:13:55.857 +01:00 [INF] InventoryService received OrderSubmitted message
+2026-04-07 09:13:55.857 +01:00 [INF] OrderId: "3e02d90d-3392-4ea8-a120-46ee79c5f15c"
+2026-04-07 09:13:55.857 +01:00 [INF] CustomerId: "ac84f2c9-6581-4247-a45f-59469e61b322"
+2026-04-07 09:13:55.857 +01:00 [INF] SubmittedAt: "2026-04-07T08:13:55.8491640Z"
+2026-04-07 09:13:55.863 +01:00 [INF] InventoryConfirmed published for OrderId: "3e02d90d-3392-4ea8-a120-46ee79c5f15c"
+2026-04-07 09:38:19.382 +01:00 [INF] Application is shutting down...
+2026-04-07 09:38:20.063 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:38:20.092 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:38:20.093 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/InventoryService
+2026-04-07 09:38:20.117 +01:00 [INF] InventoryService is waiting for messages...
+2026-04-07 09:41:10.927 +01:00 [INF] Application is shutting down...
+2026-04-07 09:53:03.268 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:53:03.295 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:53:03.295 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/InventoryService
+2026-04-07 09:53:03.314 +01:00 [INF] InventoryService is waiting for messages...
+2026-04-07 09:54:31.910 +01:00 [INF] InventoryService received OrderSubmitted message
+2026-04-07 09:54:31.911 +01:00 [INF] OrderId: "8d32cfcf-e8ce-4f64-ab2e-8d6eb2e22d38"
+2026-04-07 09:54:31.912 +01:00 [INF] CustomerId: "49f21ad1-2316-43d2-9132-2345491976e2"
+2026-04-07 09:54:31.912 +01:00 [INF] SubmittedAt: "2026-04-07T08:54:31.8545160Z"
+2026-04-07 09:54:31.930 +01:00 [INF] InventoryConfirmed published for OrderId: "8d32cfcf-e8ce-4f64-ab2e-8d6eb2e22d38"
+2026-04-07 10:05:13.682 +01:00 [INF] Application is shutting down...
+2026-04-07 10:05:14.353 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 10:05:14.385 +01:00 [INF] Hosting environment: Development
+2026-04-07 10:05:14.385 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/InventoryService
+2026-04-07 10:05:14.408 +01:00 [INF] InventoryService is waiting for messages...
+2026-04-07 10:51:35.997 +01:00 [INF] Application is shutting down...
+2026-04-07 10:51:36.653 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 10:51:36.680 +01:00 [INF] Hosting environment: Development
+2026-04-07 10:51:36.680 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/InventoryService
+2026-04-07 10:51:36.699 +01:00 [INF] InventoryService is waiting for messages...
+2026-04-07 10:55:59.395 +01:00 [INF] Application is shutting down...
+2026-04-07 10:56:09.886 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 10:56:09.912 +01:00 [INF] Hosting environment: Development
+2026-04-07 10:56:09.913 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/InventoryService
+2026-04-07 10:56:09.934 +01:00 [INF] InventoryService is waiting for messages...
+2026-04-07 11:13:00.357 +01:00 [INF] InventoryService received OrderSubmitted message
+2026-04-07 11:13:00.358 +01:00 [INF] OrderId: "33013c99-3b39-48bd-86c6-a9d354e9d969"
+2026-04-07 11:13:00.359 +01:00 [INF] CustomerId: "cbe07434-0fb0-434b-b2d9-7437b9221a77"
+2026-04-07 11:13:00.359 +01:00 [INF] SubmittedAt: "2026-04-07T10:13:00.3044160Z"
+2026-04-07 11:13:00.379 +01:00 [INF] InventoryConfirmed published for OrderId: "33013c99-3b39-48bd-86c6-a9d354e9d969"
+2026-04-07 11:19:35.814 +01:00 [INF] Application is shutting down...

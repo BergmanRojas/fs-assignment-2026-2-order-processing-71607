@@ -1,0 +1,127 @@
+@page "/orders"
+@using System.Net.Http.Json
+@using OrderFrontend.Models
+@inject HttpClient Http
+@inject NavigationManager Nav
+@inject OrderFrontend.Services.AuthService Auth
+@inject OrderFrontend.Services.CartService Cart
+
+<PageTitle>Orders</PageTitle>
+
+@if (!Auth.IsLoggedIn)
+{
+    <p>Redirecting...</p>
+}
+else
+{
+    <div class="home-page">
+        <section class="home-hero">
+            <div>
+                <h1>Orders</h1>
+                <p>View available items and add them to your cart.</p>
+            </div>
+
+            <div class="cart-summary">
+                <span>Cart Items</span>
+                <strong>@Cart.TotalItems</strong>
+            </div>
+        </section>
+
+        @if (!string.IsNullOrWhiteSpace(feedback))
+        {
+            <div class="info-banner">@feedback</div>
+        }
+
+        @if (isLoading)
+        {
+            <section class="state-card">
+                <p>Loading products...</p>
+            </section>
+        }
+        else if (!string.IsNullOrWhiteSpace(errorMessage))
+        {
+            <section class="state-card">
+                <p>@errorMessage</p>
+                <button class="secondary-btn" @onclick="LoadProducts">Retry</button>
+            </section>
+        }
+        else if (products.Count == 0)
+        {
+            <section class="state-card">
+                <p>No products available.</p>
+            </section>
+        }
+        else
+        {
+            <section class="products-grid">
+                @foreach (var product in products)
+                {
+                    <article class="product-card">
+                        <img src="@product.ImageUrl" alt="@product.Name" class="product-image" />
+
+                        <div class="product-body">
+                            <h3>@product.Name</h3>
+                            <p class="product-description">@product.Description</p>
+
+                            <div class="product-meta">
+                                <span class="product-price">€@product.Price.ToString("0.00")</span>
+                                <span class="product-stock">Stock: @product.StockQuantity</span>
+                            </div>
+
+                            <button class="primary-btn"
+                                    @onclick="() => AddToCart(product)"
+                                    disabled="@(product.StockQuantity <= 0)">
+                                @(product.StockQuantity <= 0 ? "Out of Stock" : "Add to Cart")
+                            </button>
+                        </div>
+                    </article>
+                }
+            </section>
+        }
+    </div>
+}
+
+@code {
+    private List<Product> products = new();
+    private bool isLoading = true;
+    private string? errorMessage;
+    private string? feedback;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!Auth.IsLoggedIn)
+        {
+            Nav.NavigateTo("/");
+            return;
+        }
+
+        await LoadProducts();
+    }
+
+    private async Task LoadProducts()
+    {
+        isLoading = true;
+        errorMessage = null;
+        feedback = null;
+
+        try
+        {
+            var result = await Http.GetFromJsonAsync<List<Product>>("http://localhost:5258/api/products");
+            products = result ?? new List<Product>();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading products: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void AddToCart(Product product)
+    {
+        Cart.AddToCart(product);
+        feedback = $"{product.Name} added to cart.";
+    }
+}

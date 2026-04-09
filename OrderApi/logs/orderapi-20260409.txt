@@ -1,0 +1,262 @@
+2026-04-09 00:21:49.052 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-09 00:21:49.065 +01:00 [INF] CORS policy execution successful.
+2026-04-09 00:21:49.072 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-09 00:21:49.073 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 00:21:49.083 +01:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-04-09 00:21:49.092 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-09 00:21:49.092 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 40.8204ms
+2026-04-09 00:26:18.285 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-09 00:26:18.286 +01:00 [INF] CORS policy execution successful.
+2026-04-09 00:26:18.287 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-09 00:26:18.288 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 00:26:18.291 +01:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-04-09 00:26:18.292 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-09 00:26:18.292 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 6.4725ms
+2026-04-09 00:43:12.952 +01:00 [INF] Application is shutting down...
+2026-04-09 00:43:16.820 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-04-09 00:43:16.851 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2026-04-09 00:43:16.854 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-04-08 23:43:16.853134+00:00');
+SELECT changes();
+2026-04-09 00:43:16.874 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2026-04-09 00:43:16.876 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-04-09 00:43:16.876 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-04-09 00:43:16.879 +01:00 [INF] No migrations were applied. The database is already up to date.
+2026-04-09 00:43:16.879 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2026-04-09 00:43:16.945 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Products" AS "p")
+2026-04-09 00:43:16.968 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-09 00:43:16.969 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-09 00:43:16.969 +01:00 [INF] Hosting environment: Development
+2026-04-09 00:43:16.969 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-09 00:43:16.995 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-09 00:43:16.995 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-09 00:43:16.995 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-09 00:53:27.379 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-09 00:53:27.392 +01:00 [INF] CORS policy execution successful.
+2026-04-09 00:53:27.398 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-09 00:53:27.399 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 00:53:27.409 +01:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-04-09 00:53:27.416 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-09 00:53:27.416 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 38.3408ms
+2026-04-09 00:58:23.703 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/ - null null
+2026-04-09 00:58:23.704 +01:00 [INF] CORS policy execution successful.
+2026-04-09 00:58:23.706 +01:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-04-09 00:58:23.706 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 00:58:23.709 +01:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-04-09 00:58:23.710 +01:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-04-09 00:58:23.710 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/ - 200 null application/json; charset=utf-8 7.264ms
+2026-04-09 01:07:54.021 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:07:54.022 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:07:54.022 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:07:54.054 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:07:54.071 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:07:54.076 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:07:54.078 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:07:54.079 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 57.9552ms
+2026-04-09 01:08:19.586 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:08:19.587 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:08:19.588 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:08:19.624 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:08:19.624 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:08:19.624 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:08:19.624 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:08:19.624 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 37.934ms
+2026-04-09 01:08:28.509 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:08:28.510 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:08:28.510 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:08:28.515 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:08:28.516 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:08:28.516 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:08:28.517 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:08:28.517 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 8.2425ms
+2026-04-09 01:08:34.075 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:08:34.075 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:08:34.076 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:08:34.079 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:08:34.079 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:08:34.080 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:08:34.080 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:08:34.080 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 5.9337ms
+2026-04-09 01:08:51.747 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:08:51.747 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:08:51.747 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:08:51.748 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:08:51.749 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:08:51.749 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:08:51.749 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:08:51.749 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 2.6316ms
+2026-04-09 01:09:04.344 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:09:04.345 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:09:04.345 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:04.347 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:09:04.349 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:09:04.349 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:09:04.349 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:04.349 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 5.9208ms
+2026-04-09 01:09:16.346 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:09:16.347 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:09:16.347 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:16.348 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:09:16.349 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:09:16.349 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:09:16.350 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:16.350 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 3.789ms
+2026-04-09 01:09:18.154 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:09:18.155 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:09:18.155 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:18.156 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:09:18.156 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:09:18.156 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:09:18.157 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:18.157 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 2.4177ms
+2026-04-09 01:09:20.604 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:09:20.605 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:09:20.605 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:20.607 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:09:20.608 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:09:20.608 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:09:20.608 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:20.608 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 4.431ms
+2026-04-09 01:09:22.448 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:09:22.448 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:09:22.449 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:22.450 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:09:22.451 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:09:22.451 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:09:22.451 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:22.452 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 3.6241ms
+2026-04-09 01:09:23.515 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:09:23.515 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:09:23.515 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:23.517 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:09:23.518 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:09:23.518 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:09:23.519 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:09:23.520 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 4.9968ms
+2026-04-09 01:26:00.599 +01:00 [INF] Application is shutting down...
+2026-04-09 01:26:12.045 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-04-09 01:26:12.077 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2026-04-09 01:26:12.080 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-04-09 00:26:12.079636+00:00');
+SELECT changes();
+2026-04-09 01:26:12.099 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2026-04-09 01:26:12.101 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-04-09 01:26:12.102 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-04-09 01:26:12.104 +01:00 [INF] No migrations were applied. The database is already up to date.
+2026-04-09 01:26:12.104 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2026-04-09 01:26:12.177 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Products" AS "p")
+2026-04-09 01:26:12.190 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+2026-04-09 01:26:12.226 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 1129)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Products" SET "ImageUrl" = @p0
+WHERE "Id" = @p1
+RETURNING 1;
+2026-04-09 01:26:12.227 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 1124)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Products" SET "ImageUrl" = @p0
+WHERE "Id" = @p1
+RETURNING 1;
+2026-04-09 01:26:12.227 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 1123)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Products" SET "ImageUrl" = @p0
+WHERE "Id" = @p1
+RETURNING 1;
+2026-04-09 01:26:12.227 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 1127)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Products" SET "ImageUrl" = @p0
+WHERE "Id" = @p1
+RETURNING 1;
+2026-04-09 01:26:12.227 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 1124)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Products" SET "ImageUrl" = @p0
+WHERE "Id" = @p1
+RETURNING 1;
+2026-04-09 01:26:12.227 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 1134)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Products" SET "ImageUrl" = @p0
+WHERE "Id" = @p1
+RETURNING 1;
+2026-04-09 01:26:12.253 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-09 01:26:12.254 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-09 01:26:12.255 +01:00 [INF] Hosting environment: Development
+2026-04-09 01:26:12.255 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-09 01:26:12.280 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-09 01:26:12.280 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-09 01:26:12.280 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-09 01:26:22.251 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:26:22.266 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:26:22.273 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:26:22.290 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:26:22.292 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:26:22.301 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:26:22.317 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:26:22.318 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 67.9357ms
+2026-04-09 01:27:28.771 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/products - null null
+2026-04-09 01:27:28.772 +01:00 [INF] CORS policy execution successful.
+2026-04-09 01:27:28.774 +01:00 [INF] Executing endpoint 'HTTP: GET /api/products'
+2026-04-09 01:27:28.805 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Description", "p"."ImageUrl", "p"."Name", "p"."Price", "p"."StockQuantity"
+FROM "Products" AS "p"
+ORDER BY "p"."Name"
+2026-04-09 01:27:28.805 +01:00 [INF] Setting HTTP status code 200.
+2026-04-09 01:27:28.806 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-09 01:27:28.806 +01:00 [INF] Executed endpoint 'HTTP: GET /api/products'
+2026-04-09 01:27:28.806 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/products - 200 null application/json; charset=utf-8 35.4665ms

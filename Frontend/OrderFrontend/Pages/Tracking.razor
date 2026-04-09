@@ -1,0 +1,110 @@
+@page "/tracking"
+@inject HttpClient Http
+@inject NavigationManager Nav
+@inject OrderFrontend.Services.AuthService Auth
+
+<PageTitle>Tracking</PageTitle>
+
+@if (!Auth.IsInitialized)
+{
+    <div style="padding:40px; text-align:center;">
+        <p>Loading...</p>
+    </div>
+}
+else if (!Auth.IsLoggedIn)
+{
+    <div style="padding:40px; text-align:center;">
+        <p>Redirecting...</p>
+    </div>
+}
+else
+{
+    <div class="tracking-page">
+        <section class="hero-card">
+            <h1>Tracking</h1>
+            <p>Search an order by Order ID and view its live processing status.</p>
+        </section>
+
+        <section class="tracking-search-card">
+            <label>Order ID</label>
+            <div class="tracking-search-row">
+                <input @bind="orderIdText" placeholder="Paste the order ID here" />
+                <button class="primary-button" @onclick="TrackOrder">Track Order</button>
+            </div>
+        </section>
+
+        @if (!string.IsNullOrWhiteSpace(errorMessage))
+        {
+            <p>@errorMessage</p>
+        }
+
+        @if (result is not null)
+        {
+            <section class="tracking-result-card">
+                <p><strong>Order ID:</strong> @result.OrderId</p>
+                <p><strong>Customer ID:</strong> @result.CustomerId</p>
+                <p><strong>Status:</strong> @result.Status</p>
+                <p><strong>Inventory Confirmed:</strong> @(result.InventoryConfirmedAt?.ToString("dd/MM/yyyy HH:mm:ss") ?? "-")</p>
+                <p><strong>Payment Approved:</strong> @(result.PaymentApprovedAt?.ToString("dd/MM/yyyy HH:mm:ss") ?? "-")</p>
+                <p><strong>Shipping Created:</strong> @(result.ShippingCreatedAt?.ToString("dd/MM/yyyy HH:mm:ss") ?? "-")</p>
+                <p><strong>Shipment Reference:</strong> @(string.IsNullOrWhiteSpace(result.ShipmentReference) ? "-" : result.ShipmentReference)</p>
+            </section>
+        }
+    </div>
+}
+
+@code {
+    private string orderIdText = "";
+    private string? errorMessage;
+    private TrackingResult? result;
+    private bool hasRedirected;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (!firstRender || hasRedirected || !Auth.IsInitialized)
+            return;
+
+        if (!Auth.IsLoggedIn)
+        {
+            hasRedirected = true;
+            Nav.NavigateTo("/");
+        }
+    }
+
+    private async Task TrackOrder()
+    {
+        errorMessage = null;
+        result = null;
+
+        if (!Guid.TryParse(orderIdText, out var orderId))
+        {
+            errorMessage = "Please enter a valid Order ID.";
+            return;
+        }
+
+        try
+        {
+            result = await Http.GetFromJsonAsync<TrackingResult>($"api/orders/{orderId}/status");
+
+            if (result is null)
+            {
+                errorMessage = "Order not found.";
+            }
+        }
+        catch
+        {
+            errorMessage = "Order not found or API unavailable.";
+        }
+    }
+
+    private sealed class TrackingResult
+    {
+        public Guid OrderId { get; set; }
+        public Guid CustomerId { get; set; }
+        public string Status { get; set; } = string.Empty;
+        public DateTime? InventoryConfirmedAt { get; set; }
+        public DateTime? PaymentApprovedAt { get; set; }
+        public DateTime? ShippingCreatedAt { get; set; }
+        public string? ShipmentReference { get; set; }
+    }
+}

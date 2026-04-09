@@ -1,0 +1,61 @@
+@page "/"
+@page "/login"
+@inject OrderFrontend.Services.AuthService Auth
+@inject NavigationManager Nav
+
+<PageTitle>Deals Login</PageTitle>
+
+<div class="login-container">
+    <img src="loginlogo.png" alt="Deals Login Logo" class="login-logo" />
+
+    <h1>Welcome to Deals</h1>
+    <p class="subtitle">Sign in to continue to the order processing dashboard.</p>
+
+    <div class="login-form">
+        <label>Email</label>
+        <input @bind="email" type="email" placeholder="Enter email" />
+
+        <label>Password</label>
+        <input @bind="password" type="password" placeholder="Enter password" />
+
+        @if (!string.IsNullOrWhiteSpace(errorMessage))
+        {
+            <div class="login-error">@errorMessage</div>
+        }
+
+        <button @onclick="HandleLogin">Login</button>
+
+        <p class="demo-text">Demo credentials: <strong>admin@demo.com / admin123</strong></p>
+    </div>
+</div>
+
+@code {
+    private string email = "admin@demo.com";
+    private string password = "";
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Auth.InitializeAsync();
+
+        if (Auth.IsLoggedIn)
+        {
+            Nav.NavigateTo("/home");
+        }
+    }
+
+    private async Task HandleLogin()
+    {
+        errorMessage = null;
+
+        var success = await Auth.LoginAsync(email, password);
+
+        if (success)
+        {
+            Nav.NavigateTo("/home");
+            return;
+        }
+
+        errorMessage = "Invalid email or password.";
+    }
+}

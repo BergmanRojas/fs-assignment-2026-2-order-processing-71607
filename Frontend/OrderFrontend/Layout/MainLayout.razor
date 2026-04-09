@@ -1,0 +1,67 @@
+﻿@inherits LayoutComponentBase
+@implements IDisposable
+@inject NavigationManager Nav
+@inject OrderFrontend.Services.AuthService Auth
+
+<div class="app-shell">
+    @if (ShowTopBar)
+    {
+        <header class="topbar">
+            <div class="topbar-left">
+                <img src="everdeals.png" alt="EverDeals" class="topbar-logo" />
+            </div>
+
+            <div class="topbar-right">
+                <button class="topbar-link" @onclick="GoHome">Home</button>
+                <button class="topbar-link" @onclick="GoOrders">Orders</button>
+                <button class="topbar-button logout" @onclick="Logout">Logout</button>
+            </div>
+        </header>
+    }
+
+    <main class="page-content">
+        @Body
+    </main>
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        Auth.OnChange += HandleAuthChanged;
+    }
+
+    private void HandleAuthChanged()
+    {
+        InvokeAsync(StateHasChanged);
+    }
+
+    private bool ShowTopBar
+        => Auth.IsLoggedIn && !IsLoginPage();
+
+    private bool IsLoginPage()
+    {
+        var relativePath = Nav.ToBaseRelativePath(Nav.Uri);
+        return string.IsNullOrWhiteSpace(relativePath);
+    }
+
+    private void GoHome()
+    {
+        Nav.NavigateTo("/home");
+    }
+
+    private void GoOrders()
+    {
+        Nav.NavigateTo("/orders");
+    }
+
+    private async Task Logout()
+    {
+        await Auth.LogoutAsync();
+        Nav.NavigateTo("/", forceLoad: true);
+    }
+
+    public void Dispose()
+    {
+        Auth.OnChange -= HandleAuthChanged;
+    }
+}

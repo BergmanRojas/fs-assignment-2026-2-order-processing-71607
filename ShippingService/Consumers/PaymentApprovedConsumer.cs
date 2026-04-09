@@ -1,10 +1,10 @@
 using System.Text;
 using System.Text.Json;
+using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using Shared.Contracts.Events;
 using ShippingService.Producers;
-using Microsoft.Extensions.Logging;
 
 namespace ShippingService.Consumers;
 
@@ -31,12 +31,26 @@ public class PaymentApprovedConsumer : BackgroundService
         var connection = await factory.CreateConnectionAsync(stoppingToken);
         var channel = await connection.CreateChannelAsync(cancellationToken: stoppingToken);
 
+        await channel.ExchangeDeclareAsync(
+            exchange: "payment-approved-exchange",
+            type: ExchangeType.Fanout,
+            durable: false,
+            autoDelete: false,
+            arguments: null,
+            cancellationToken: stoppingToken);
+
         await channel.QueueDeclareAsync(
-            queue: "payment-approved",
+            queue: "payment-approved-shipping",
             durable: false,
             exclusive: false,
             autoDelete: false,
             arguments: null,
+            cancellationToken: stoppingToken);
+
+        await channel.QueueBindAsync(
+            queue: "payment-approved-shipping",
+            exchange: "payment-approved-exchange",
+            routingKey: string.Empty,
             cancellationToken: stoppingToken);
 
         var consumer = new AsyncEventingBasicConsumer(channel);
@@ -67,11 +81,14 @@ public class PaymentApprovedConsumer : BackgroundService
                 await _publisher.PublishShippingCreated(shippingCreated);
             }
 
-            await channel.BasicAckAsync(ea.DeliveryTag, multiple: false, cancellationToken: stoppingToken);
+            await channel.BasicAckAsync(
+                ea.DeliveryTag,
+                multiple: false,
+                cancellationToken: stoppingToken);
         };
 
         await channel.BasicConsumeAsync(
-            queue: "payment-approved",
+            queue: "payment-approved-shipping",
             autoAck: false,
             consumer: consumer,
             cancellationToken: stoppingToken);

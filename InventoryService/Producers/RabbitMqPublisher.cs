@@ -27,10 +27,10 @@ public class RabbitMqPublisher
         await using var connection = await factory.CreateConnectionAsync();
         await using var channel = await connection.CreateChannelAsync();
 
-        await channel.QueueDeclareAsync(
-            queue: "inventory-confirmed",
+        await channel.ExchangeDeclareAsync(
+            exchange: "inventory-confirmed-exchange",
+            type: ExchangeType.Fanout,
             durable: false,
-            exclusive: false,
             autoDelete: false,
             arguments: null);
 
@@ -38,8 +38,8 @@ public class RabbitMqPublisher
         var body = Encoding.UTF8.GetBytes(json);
 
         await channel.BasicPublishAsync(
-            exchange: "",
-            routingKey: "inventory-confirmed",
+            exchange: "inventory-confirmed-exchange",
+            routingKey: string.Empty,
             body: body);
 
         _logger.LogInformation(

@@ -1,0 +1,145 @@
+@page "/home"
+@using System.Net.Http.Json
+@using OrderFrontend.Models
+@inject HttpClient Http
+@inject NavigationManager Nav
+@inject OrderFrontend.Services.AuthService Auth
+@inject OrderFrontend.Services.CartService Cart
+
+<PageTitle>Home</PageTitle>
+
+@if (!Auth.IsLoggedIn)
+{
+    <p>Redirecting...</p>
+}
+else
+{
+    <div class="home-page">
+        <section class="home-hero">
+            <div>
+                <p class="eyebrow">Deals Store</p>
+                <h1>Our Products</h1>
+                <p>Browse available items and add them to your cart.</p>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span>Products</span>
+                    <strong>@products.Count</strong>
+                </div>
+                <div class="hero-stat">
+                    <span>Cart Items</span>
+                    <strong>@Cart.TotalItems</strong>
+                </div>
+            </div>
+        </section>
+
+        @if (!string.IsNullOrWhiteSpace(feedback))
+        {
+            <div class="info-banner">@feedback</div>
+        }
+
+        @if (isLoading)
+        {
+            <section class="state-card">
+                <p>Loading products...</p>
+            </section>
+        }
+        else if (!string.IsNullOrWhiteSpace(errorMessage))
+        {
+            <section class="state-card">
+                <p>@errorMessage</p>
+                <button class="secondary-btn" @onclick="LoadProducts">Retry</button>
+            </section>
+        }
+        else if (products.Count == 0)
+        {
+            <section class="state-card">
+                <p>No products available.</p>
+            </section>
+        }
+        else
+        {
+            <section class="products-grid">
+                @foreach (var product in products)
+                {
+                    <article class="product-card">
+                        <div class="product-image-wrap">
+                            <img src="@GetProductImage(product)" alt="@product.Name" class="product-image" />
+                        </div>
+
+                        <div class="product-body">
+                            <h3>@product.Name</h3>
+                            <p class="product-description">@product.Description</p>
+
+                            <div class="product-meta">
+                                <span class="product-price">€@product.Price.ToString("0.00")</span>
+                                <span class="product-stock @(product.StockQuantity <= 5 ? "low-stock" : string.Empty)">
+                                    Stock: @product.StockQuantity
+                                </span>
+                            </div>
+
+                            <button class="primary-btn"
+                                    @onclick="() => AddToCart(product)"
+                                    disabled="@(product.StockQuantity <= 0)">
+                                @(product.StockQuantity <= 0 ? "Out of Stock" : "Add to Cart")
+                            </button>
+                        </div>
+                    </article>
+                }
+            </section>
+        }
+    </div>
+}
+
+@code {
+    private List<Product> products = new();
+    private bool isLoading = true;
+    private string? errorMessage;
+    private string? feedback;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!Auth.IsLoggedIn)
+        {
+            Nav.NavigateTo("/");
+            return;
+        }
+
+        await LoadProducts();
+    }
+
+    private async Task LoadProducts()
+    {
+        isLoading = true;
+        errorMessage = null;
+        feedback = null;
+
+        try
+        {
+            var result = await Http.GetFromJsonAsync<List<Product>>("http://localhost:5258/api/products");
+            products = result ?? new List<Product>();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading products: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void AddToCart(Product product)
+    {
+        Cart.AddToCart(product);
+        feedback = $"{product.Name} added to cart.";
+    }
+
+    private static string GetProductImage(Product product)
+    {
+        return string.IsNullOrWhiteSpace(product.ImageUrl)
+            ? "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='280'><rect width='100%25' height='100%25' fill='%23f6f7fb'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23667085' font-family='Arial' font-size='28'>No Image</text></svg>"
+            : product.ImageUrl;
+    }
+}

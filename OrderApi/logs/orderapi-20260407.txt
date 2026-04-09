@@ -460,3 +460,387 @@ RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified end
 2026-04-07 00:47:17.887 +01:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
 2026-04-07 00:47:17.887 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
 2026-04-07 00:47:17.887 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/803b98ed-45c4-4740-a55f-a14f21e75c30/status - 200 null application/json; charset=utf-8 1.1515ms
+2026-04-07 00:55:34.494 +01:00 [INF] Application is shutting down...
+2026-04-07 08:56:25.454 +01:00 [ERR] BackgroundService failed
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed, host 127.0.0.1:5672)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed, host 127.0.0.1:5672
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.OpenAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.CreateAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandlerAsync(AmqpTcpEndpoint endpoint, CancellationToken cancellationToken)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Framing.AutorecoveringConnection.CreateAsync(ConnectionConfig config, IEndpointResolver endpoints, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   at OrderApi.Consumers.ShippingCreatedConsumer.ExecuteAsync(CancellationToken stoppingToken) in /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi/Consumers/ShippingCreatedConsumer.cs:line 31
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-04-07 08:56:25.455 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-07 08:56:25.498 +01:00 [FTL] The HostOptions.BackgroundServiceExceptionBehavior is configured to StopHost. A BackgroundService has thrown an unhandled exception, and the IHost instance is stopping. To avoid this behavior, configure this to Ignore; however the BackgroundService will not be restarted.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed, host 127.0.0.1:5672)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed, host 127.0.0.1:5672
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFactory.ConnectUsingAddressFamilyAsync(IPEndPoint endpoint, Func`2 socketFactory, AddressFamily family, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFactory.OpenAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.CreateAsync(AmqpTcpEndpoint amqpTcpEndpoint, Func`2 socketFactory, TimeSpan connectionTimeout, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandlerAsync(AmqpTcpEndpoint endpoint, CancellationToken cancellationToken)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOneAsync[T](IEndpointResolver resolver, Func`3 selector, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Framing.AutorecoveringConnection.CreateAsync(ConnectionConfig config, IEndpointResolver endpoints, CancellationToken cancellationToken)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnectionAsync(IEndpointResolver endpointResolver, String clientProvidedName, CancellationToken cancellationToken)
+   at OrderApi.Consumers.ShippingCreatedConsumer.ExecuteAsync(CancellationToken stoppingToken) in /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi/Consumers/ShippingCreatedConsumer.cs:line 31
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-04-07 08:56:25.499 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 08:56:25.504 +01:00 [INF] Application is shutting down...
+2026-04-07 08:56:25.504 +01:00 [INF] Hosting environment: Development
+2026-04-07 08:56:25.504 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-07 09:07:31.735 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-07 09:07:31.759 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:07:31.759 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:07:31.759 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-07 09:07:31.762 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-07 09:07:44.498 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - null null
+2026-04-07 09:07:44.530 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:07:44.535 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:07:44.550 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-07 09:07:44.568 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:07:44.569 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - 200 null application/json; charset=utf-8 71.7523ms
+2026-04-07 09:07:58.575 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - null null
+2026-04-07 09:07:58.576 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:07:58.577 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:07:58.578 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-07 09:07:58.579 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:07:58.579 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - 200 null application/json; charset=utf-8 4.3913ms
+2026-04-07 09:08:40.548 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-07 09:08:40.549 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:08:40.550 +01:00 [INF] Order created with OrderId: "fb9ee4f1-1015-4696-8215-25b35fad4bab" for CustomerId: "673c989b-7cda-436b-a249-217c23ab4ed9"
+2026-04-07 09:08:40.585 +01:00 [INF] OrderSubmitted event published for OrderId: "fb9ee4f1-1015-4696-8215-25b35fad4bab"
+2026-04-07 09:08:40.585 +01:00 [INF] Setting HTTP status code 201.
+2026-04-07 09:08:40.592 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-07 09:08:40.595 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:08:40.596 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 48.6982ms
+2026-04-07 09:08:50.817 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - null null
+2026-04-07 09:08:50.817 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:08:50.818 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:08:50.818 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-07 09:08:50.818 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:08:50.818 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - 200 null application/json; charset=utf-8 1.0767ms
+2026-04-07 09:08:58.788 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - null null
+2026-04-07 09:08:58.788 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:08:58.789 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:08:58.789 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-07 09:08:58.789 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:08:58.789 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - 200 null application/json; charset=utf-8 0.9616ms
+2026-04-07 09:09:17.190 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - null null
+2026-04-07 09:09:17.190 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:09:17.190 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:09:17.190 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-07 09:09:17.191 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:09:17.191 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - 200 null application/json; charset=utf-8 0.755ms
+2026-04-07 09:09:37.215 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - null null
+2026-04-07 09:09:37.216 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - 404 0 null 1.3194ms
+2026-04-07 09:09:37.217 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/TU_ORDER_ID/status, Response status code: 404
+2026-04-07 09:10:20.951 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/fb9ee4f1-1015-4696-8215-25b35fad4bab/status - null null
+2026-04-07 09:10:20.951 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:10:20.952 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:10:20.953 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 09:10:20.955 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:10:20.955 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/fb9ee4f1-1015-4696-8215-25b35fad4bab/status - 200 null application/json; charset=utf-8 4.4299ms
+2026-04-07 09:10:35.782 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - null null
+2026-04-07 09:10:35.782 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:10:35.782 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:10:35.782 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-07 09:10:35.782 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:10:35.782 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - 200 null application/json; charset=utf-8 0.6637ms
+2026-04-07 09:10:51.299 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/fb9ee4f1-1015-4696-8215-25b35fad4bab/status - null null
+2026-04-07 09:10:51.299 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:10:51.299 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:10:51.299 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 09:10:51.299 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:10:51.299 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/fb9ee4f1-1015-4696-8215-25b35fad4bab/status - 200 null application/json; charset=utf-8 0.7635ms
+2026-04-07 09:13:13.786 +01:00 [INF] Order "fb9ee4f1-1015-4696-8215-25b35fad4bab" marked as Completed after shipping creation
+2026-04-07 09:13:55.848 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-07 09:13:55.849 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:13:55.849 +01:00 [INF] Order created with OrderId: "3e02d90d-3392-4ea8-a120-46ee79c5f15c" for CustomerId: "ac84f2c9-6581-4247-a45f-59469e61b322"
+2026-04-07 09:13:55.859 +01:00 [INF] OrderSubmitted event published for OrderId: "3e02d90d-3392-4ea8-a120-46ee79c5f15c"
+2026-04-07 09:13:55.859 +01:00 [INF] Setting HTTP status code 201.
+2026-04-07 09:13:55.859 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-07 09:13:55.859 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:13:55.859 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 10.6683ms
+2026-04-07 09:13:55.875 +01:00 [INF] Order "3e02d90d-3392-4ea8-a120-46ee79c5f15c" marked as Completed after shipping creation
+2026-04-07 09:14:00.881 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - null null
+2026-04-07 09:14:00.881 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - 404 0 null 0.556ms
+2026-04-07 09:14:00.882 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/TU_ORDER_ID/status, Response status code: 404
+2026-04-07 09:15:35.781 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/3e02d90d-3392-4ea8-a120-46ee79c5f15c/status - null null
+2026-04-07 09:15:35.781 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:15:35.782 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:15:35.782 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 09:15:35.782 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:15:35.782 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/3e02d90d-3392-4ea8-a120-46ee79c5f15c/status - 200 null application/json; charset=utf-8 1.0252ms
+2026-04-07 09:15:46.833 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-07 09:15:46.833 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:15:46.834 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:15:46.834 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-07 09:15:46.835 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:15:46.835 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 1.787ms
+2026-04-07 09:16:02.753 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - null null
+2026-04-07 09:16:02.753 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:16:02.753 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:16:02.753 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-07 09:16:02.753 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:16:02.753 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - 200 null application/json; charset=utf-8 0.6127ms
+2026-04-07 09:34:57.228 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-07 09:34:57.229 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:34:57.229 +01:00 [INF] Order created with OrderId: "6a732f36-f4f8-4f79-b1db-7598c1d74e4e" for CustomerId: "31410450-ece6-42d5-b576-08d632ee49ea"
+2026-04-07 09:34:57.236 +01:00 [INF] OrderSubmitted event published for OrderId: "6a732f36-f4f8-4f79-b1db-7598c1d74e4e"
+2026-04-07 09:34:57.236 +01:00 [INF] Setting HTTP status code 201.
+2026-04-07 09:34:57.237 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-07 09:34:57.237 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:34:57.237 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 8.2957ms
+2026-04-07 09:34:57.246 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - null null
+2026-04-07 09:34:57.246 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - 404 0 null 0.2806ms
+2026-04-07 09:34:57.246 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/TU_ORDER_ID/status, Response status code: 404
+2026-04-07 09:35:49.700 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/6a732f36-f4f8-4f79-b1db-7598c1d74e4e/status - null null
+2026-04-07 09:35:49.701 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:35:49.701 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:35:49.701 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 09:35:49.701 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:35:49.701 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/6a732f36-f4f8-4f79-b1db-7598c1d74e4e/status - 200 null application/json; charset=utf-8 0.5791ms
+2026-04-07 09:36:41.937 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/6a732f36-f4f8-4f79-b1db-7598c1d74e4e/status - null null
+2026-04-07 09:36:41.940 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:36:41.942 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:36:41.942 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 09:36:41.942 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:36:41.942 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/6a732f36-f4f8-4f79-b1db-7598c1d74e4e/status - 200 null application/json; charset=utf-8 5.4279ms
+2026-04-07 09:36:41.952 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - null null
+2026-04-07 09:36:41.952 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:36:41.952 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:36:41.952 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-07 09:36:41.952 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:36:41.952 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders?status=Completed - 200 null application/json; charset=utf-8 0.4606ms
+2026-04-07 09:38:21.222 +01:00 [INF] Application is shutting down...
+2026-04-07 09:38:23.607 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-07 09:38:23.631 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-07 09:38:23.631 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-07 09:38:23.631 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-07 09:38:23.634 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:38:23.635 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:38:23.635 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-07 09:38:55.317 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-07 09:38:55.348 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:38:55.349 +01:00 [INF] Order created with OrderId: "9af6b491-3bf5-4797-935c-40edbad13d04" for CustomerId: "a4d6cfc5-0c26-4537-838e-0fe93d31dffd"
+2026-04-07 09:38:55.401 +01:00 [INF] OrderSubmitted event published for OrderId: "9af6b491-3bf5-4797-935c-40edbad13d04"
+2026-04-07 09:38:55.404 +01:00 [INF] Setting HTTP status code 201.
+2026-04-07 09:38:55.412 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-07 09:38:55.419 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:38:55.421 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 105.0324ms
+2026-04-07 09:39:17.547 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/NUEVO_ORDER_ID/status - null null
+2026-04-07 09:39:17.551 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/NUEVO_ORDER_ID/status - 404 0 null 4.8294ms
+2026-04-07 09:39:17.552 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/NUEVO_ORDER_ID/status, Response status code: 404
+2026-04-07 09:39:56.192 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/D/status - null null
+2026-04-07 09:39:56.192 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/D/status - 404 0 null 0.8672ms
+2026-04-07 09:39:56.193 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/D/status, Response status code: 404
+2026-04-07 09:40:08.165 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/9af6b491-3bf5-4797-935c-40edbad13d04/status - null null
+2026-04-07 09:40:08.165 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:40:08.166 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:40:08.171 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 09:40:08.173 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:40:08.173 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/9af6b491-3bf5-4797-935c-40edbad13d04/status - 200 null application/json; charset=utf-8 8.4977ms
+2026-04-07 09:41:10.927 +01:00 [INF] Application is shutting down...
+2026-04-07 09:53:00.974 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-07 09:53:00.998 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-07 09:53:00.998 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-07 09:53:00.998 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-07 09:53:01.000 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 09:53:01.001 +01:00 [INF] Hosting environment: Development
+2026-04-07 09:53:01.001 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-07 09:53:37.004 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-07 09:53:37.036 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:53:37.037 +01:00 [INF] Order created with OrderId: "e8cd551e-78dc-4e4f-81ea-7110a615c5ff" for CustomerId: "84b60691-31f5-4b32-8654-d08da46a6560"
+2026-04-07 09:53:37.090 +01:00 [INF] OrderSubmitted event published for OrderId: "e8cd551e-78dc-4e4f-81ea-7110a615c5ff"
+2026-04-07 09:53:37.092 +01:00 [INF] Setting HTTP status code 201.
+2026-04-07 09:53:37.099 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-07 09:53:37.105 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:53:37.107 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 104.5255ms
+2026-04-07 09:53:42.128 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - null null
+2026-04-07 09:53:42.133 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/TU_ORDER_ID/status - 404 0 null 5.7755ms
+2026-04-07 09:53:42.134 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5258/api/orders/TU_ORDER_ID/status, Response status code: 404
+2026-04-07 09:54:31.853 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-07 09:54:31.854 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:54:31.854 +01:00 [INF] Order created with OrderId: "8d32cfcf-e8ce-4f64-ab2e-8d6eb2e22d38" for CustomerId: "49f21ad1-2316-43d2-9132-2345491976e2"
+2026-04-07 09:54:31.863 +01:00 [INF] OrderSubmitted event published for OrderId: "8d32cfcf-e8ce-4f64-ab2e-8d6eb2e22d38"
+2026-04-07 09:54:31.863 +01:00 [INF] Setting HTTP status code 201.
+2026-04-07 09:54:31.866 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-07 09:54:31.867 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 09:54:31.867 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 14.1806ms
+2026-04-07 09:54:31.941 +01:00 [INF] Order "8d32cfcf-e8ce-4f64-ab2e-8d6eb2e22d38" marked as InventoryConfirmed
+2026-04-07 09:54:36.888 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/e8cd551e-78dc-4e4f-81ea-7110a615c5ff/status - null null
+2026-04-07 09:54:36.889 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:54:36.891 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:54:36.895 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 09:54:36.897 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:54:36.897 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/e8cd551e-78dc-4e4f-81ea-7110a615c5ff/status - 200 null application/json; charset=utf-8 8.7164ms
+2026-04-07 09:56:28.334 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/8d32cfcf-e8ce-4f64-ab2e-8d6eb2e22d38/status - null null
+2026-04-07 09:56:28.335 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:56:28.335 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:56:28.335 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 09:56:28.336 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 09:56:28.336 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/8d32cfcf-e8ce-4f64-ab2e-8d6eb2e22d38/status - 200 null application/json; charset=utf-8 2.0885ms
+2026-04-07 09:56:39.984 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-07 09:56:39.984 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:56:39.984 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 09:56:39.989 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-07 09:56:39.990 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-07 09:56:39.990 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 6.8112ms
+2026-04-07 10:03:24.380 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-07 10:03:24.381 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 10:03:24.381 +01:00 [INF] Order created with OrderId: "e691496d-9664-47b8-8ff1-e5518d238fbf" for CustomerId: "166f54cf-f94f-447f-85c5-14d15a4b36fb"
+2026-04-07 10:03:24.391 +01:00 [INF] OrderSubmitted event published for OrderId: "e691496d-9664-47b8-8ff1-e5518d238fbf"
+2026-04-07 10:03:24.391 +01:00 [INF] Setting HTTP status code 201.
+2026-04-07 10:03:24.391 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-07 10:03:24.391 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 10:03:24.392 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 11.0952ms
+2026-04-07 10:03:24.460 +01:00 [INF] Order "e691496d-9664-47b8-8ff1-e5518d238fbf" marked as PaymentApproved
+2026-04-07 10:03:55.245 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/e691496d-9664-47b8-8ff1-e5518d238fbf/status - null null
+2026-04-07 10:03:55.246 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 10:03:55.246 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 10:03:55.246 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 10:03:55.246 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 10:03:55.246 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/e691496d-9664-47b8-8ff1-e5518d238fbf/status - 200 null application/json; charset=utf-8 0.588ms
+2026-04-07 10:05:15.438 +01:00 [INF] Application is shutting down...
+2026-04-07 10:05:17.814 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-07 10:05:17.840 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-07 10:05:17.840 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-07 10:05:17.843 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 10:05:17.841 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-07 10:05:17.843 +01:00 [INF] Hosting environment: Development
+2026-04-07 10:05:17.843 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-07 10:05:25.285 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-07 10:05:25.316 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 10:05:25.317 +01:00 [INF] Order created with OrderId: "6ab6e62b-bc10-4dd2-9201-3640ad56544d" for CustomerId: "3c60dda7-3931-479b-b84b-0cba98f11275"
+2026-04-07 10:05:25.372 +01:00 [INF] OrderSubmitted event published for OrderId: "6ab6e62b-bc10-4dd2-9201-3640ad56544d"
+2026-04-07 10:05:25.375 +01:00 [INF] Setting HTTP status code 201.
+2026-04-07 10:05:25.383 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-07 10:05:25.389 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 10:05:25.392 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 107.4643ms
+2026-04-07 10:06:01.644 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/6ab6e62b-bc10-4dd2-9201-3640ad56544d/status - null null
+2026-04-07 10:06:01.647 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 10:06:01.648 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 10:06:01.650 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 10:06:01.652 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 10:06:01.652 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/6ab6e62b-bc10-4dd2-9201-3640ad56544d/status - 200 null application/json; charset=utf-8 8.1353ms
+2026-04-07 10:51:38.230 +01:00 [INF] Application is shutting down...
+2026-04-07 10:56:06.321 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-07 10:56:06.344 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-07 10:56:06.344 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-07 10:56:06.344 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-07 10:56:06.347 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 10:56:06.347 +01:00 [INF] Hosting environment: Development
+2026-04-07 10:56:06.347 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-07 10:57:04.183 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-07 10:57:04.214 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 10:57:04.215 +01:00 [INF] Order created with OrderId: "357fcfd2-ddad-406c-83aa-b71b0e6013fb" for CustomerId: "01b5d2c6-3f7b-4a71-a42a-063bf1e946fc"
+2026-04-07 10:57:04.253 +01:00 [INF] OrderSubmitted event published for OrderId: "357fcfd2-ddad-406c-83aa-b71b0e6013fb"
+2026-04-07 10:57:04.268 +01:00 [INF] OrderSubmitted event published for OrderId: "357fcfd2-ddad-406c-83aa-b71b0e6013fb"
+2026-04-07 10:57:04.271 +01:00 [INF] Setting HTTP status code 201.
+2026-04-07 10:57:04.278 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-07 10:57:04.286 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 10:57:04.288 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 106.0244ms
+2026-04-07 10:57:25.577 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/357fcfd2-ddad-406c-83aa-b71b0e6013fb/status - null null
+2026-04-07 10:57:25.581 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 10:57:25.582 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 10:57:25.587 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 10:57:25.588 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 10:57:25.589 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/357fcfd2-ddad-406c-83aa-b71b0e6013fb/status - 200 null application/json; charset=utf-8 11.6485ms
+2026-04-07 11:13:00.303 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-07 11:13:00.304 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 11:13:00.304 +01:00 [INF] Order created with OrderId: "33013c99-3b39-48bd-86c6-a9d354e9d969" for CustomerId: "cbe07434-0fb0-434b-b2d9-7437b9221a77"
+2026-04-07 11:13:00.312 +01:00 [INF] OrderSubmitted event published for OrderId: "33013c99-3b39-48bd-86c6-a9d354e9d969"
+2026-04-07 11:13:00.313 +01:00 [INF] OrderSubmitted event published for OrderId: "33013c99-3b39-48bd-86c6-a9d354e9d969"
+2026-04-07 11:13:00.313 +01:00 [INF] Setting HTTP status code 201.
+2026-04-07 11:13:00.314 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-07 11:13:00.315 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 11:13:00.315 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 11.6799ms
+2026-04-07 11:13:31.998 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/33013c99-3b39-48bd-86c6-a9d354e9d969/status - null null
+2026-04-07 11:13:31.999 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 11:13:31.999 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 11:13:31.999 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 11:13:32.000 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 11:13:32.000 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/33013c99-3b39-48bd-86c6-a9d354e9d969/status - 200 null application/json; charset=utf-8 1.6666ms
+2026-04-07 11:19:42.081 +01:00 [INF] Application is shutting down...
+2026-04-07 12:24:34.781 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-07 12:24:34.802 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-07 12:24:34.802 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-07 12:24:34.802 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-07 12:24:34.804 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 12:24:34.804 +01:00 [INF] Hosting environment: Development
+2026-04-07 12:24:34.804 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-07 12:24:40.071 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/swagger - null null
+2026-04-07 12:24:40.102 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/swagger - 301 0 null 33.2019ms
+2026-04-07 12:24:40.112 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/swagger/index.html - null null
+2026-04-07 12:24:40.145 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/swagger/index.html - 200 null text/html;charset=utf-8 33.6196ms
+2026-04-07 12:24:40.152 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/swagger/swagger-ui.css - null null
+2026-04-07 12:24:40.155 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/swagger/index.css - null null
+2026-04-07 12:24:40.155 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/swagger/swagger-ui-bundle.js - null null
+2026-04-07 12:24:40.155 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-07 12:24:40.155 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/swagger/index.js - null null
+2026-04-07 12:24:40.155 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/swagger/index.js - 200 null application/javascript;charset=utf-8 0.5156ms
+2026-04-07 12:24:40.156 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/swagger/index.css - 200 152 text/css 1.5111ms
+2026-04-07 12:24:40.156 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/swagger/swagger-ui.css - 200 26479 text/css 4.371ms
+2026-04-07 12:24:40.159 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/swagger/swagger-ui-standalone-preset.js - 200 76613 text/javascript 3.8ms
+2026-04-07 12:24:40.159 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/swagger/swagger-ui-bundle.js - 200 418181 text/javascript 4.013ms
+2026-04-07 12:24:40.229 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/swagger/favicon-32x32.png - null null
+2026-04-07 12:24:40.229 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/swagger/favicon-16x16.png - null null
+2026-04-07 12:24:40.230 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/swagger/favicon-32x32.png - 200 628 image/png 0.9136ms
+2026-04-07 12:24:40.230 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/swagger/favicon-16x16.png - 200 665 image/png 0.727ms
+2026-04-07 12:24:40.238 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/swagger/v1/swagger.json - null null
+2026-04-07 12:24:40.242 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-04-07 12:24:40.285 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.8979ms
+2026-04-07 12:26:19.234 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5258/api/orders/checkout - null null
+2026-04-07 12:26:19.236 +01:00 [INF] Executing endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 12:26:19.237 +01:00 [INF] Order created with OrderId: "8ac3690f-7d3b-4088-a9a9-3f55c00b1aaa" for CustomerId: "519f4ad3-f046-4974-84e9-1cebf215c20f"
+2026-04-07 12:26:19.265 +01:00 [INF] OrderSubmitted event published for OrderId: "8ac3690f-7d3b-4088-a9a9-3f55c00b1aaa"
+2026-04-07 12:26:19.278 +01:00 [INF] OrderSubmitted event published for OrderId: "8ac3690f-7d3b-4088-a9a9-3f55c00b1aaa"
+2026-04-07 12:26:19.280 +01:00 [INF] Setting HTTP status code 201.
+2026-04-07 12:26:19.283 +01:00 [INF] Writing value of type '<>f__AnonymousType3`5' as Json.
+2026-04-07 12:26:19.286 +01:00 [INF] Executed endpoint 'HTTP: POST /api/orders/checkout'
+2026-04-07 12:26:19.286 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5258/api/orders/checkout - 201 null application/json; charset=utf-8 52.3358ms
+2026-04-07 12:26:45.655 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders/8ac3690f-7d3b-4088-a9a9-3f55c00b1aaa/status - null null
+2026-04-07 12:26:45.657 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 12:26:45.658 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 12:26:45.661 +01:00 [INF] Writing value of type '<>f__AnonymousType2`6' as Json.
+2026-04-07 12:26:45.662 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders/{id:guid}/status'
+2026-04-07 12:26:45.662 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders/8ac3690f-7d3b-4088-a9a9-3f55c00b1aaa/status - 200 null application/json; charset=utf-8 6.5573ms
+2026-04-07 12:27:18.106 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5258/api/orders - null null
+2026-04-07 12:27:18.107 +01:00 [INF] Executing endpoint 'HTTP: GET /api/orders'
+2026-04-07 12:27:18.107 +01:00 [INF] Setting HTTP status code 200.
+2026-04-07 12:27:18.110 +01:00 [INF] Writing value of type 'List`1' as Json.
+2026-04-07 12:27:18.111 +01:00 [INF] Executed endpoint 'HTTP: GET /api/orders'
+2026-04-07 12:27:18.112 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5258/api/orders - 200 null application/json; charset=utf-8 5.2102ms
+2026-04-07 12:47:41.800 +01:00 [INF] Application is shutting down...
+2026-04-07 12:47:42.296 +01:00 [INF] Now listening on: http://localhost:5258
+2026-04-07 12:47:42.319 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-07 12:47:42.320 +01:00 [INF] Hosting environment: Development
+2026-04-07 12:47:42.320 +01:00 [INF] Content root path: /Users/bfrojasc/RiderProjects/FullStackAssignment4-71607/OrderApi
+2026-04-07 12:47:42.320 +01:00 [INF] OrderApi is waiting for inventory-confirmed messages...
+2026-04-07 12:47:42.320 +01:00 [INF] OrderApi is waiting for payment-approved messages...
+2026-04-07 12:47:42.320 +01:00 [INF] OrderApi is waiting for shipping-created messages...
+2026-04-07 15:48:42.048 +01:00 [INF] Application is shutting down...
